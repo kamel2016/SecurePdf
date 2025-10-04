@@ -1,0 +1,390 @@
+/* Styles personnalisés pour l'application PDF Security */
+
+:root {
+    --primary-color: #2563eb;
+    --success-color: #059669;
+    --danger-color: #dc2626;
+    --info-color: #0891b2;
+    --warning-color: #d97706;
+    --light-gray: #f8fafc;
+    --border-radius: 12px;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+main {
+    background: white;
+    margin: 2rem 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    min-height: calc(100vh - 200px);
+}
+
+/* ========================================
+   ZONE DRAG & DROP AMÉLIORÉE ET PLUS GRANDE
+   ======================================== */
+
+.file-drop-area-large {
+    position: relative;
+    border: 4px dashed #cbd5e1;
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+    .file-drop-area-large:hover {
+        border-color: var(--primary-color);
+        background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(37, 99, 235, 0.15);
+    }
+
+    .file-drop-area-large.dragover {
+        border-color: var(--primary-color);
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        transform: scale(1.02);
+        box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25);
+        border-style: solid;
+    }
+
+    .file-drop-area-large.file-selected {
+        border-color: var(--success-color);
+        background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        border-style: solid;
+    }
+
+.file-drop-content {
+    width: 100%;
+}
+
+.file-drop-icon-large {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.file-drop-icon-large i {
+    filter: drop-shadow(0 4px 8px rgba(37, 99, 235, 0.3));
+}
+
+.file-drop-area-large:hover .file-drop-icon-large i {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.file-drop-text-large h3 {
+    color: #1e293b;
+    font-size: 1.8rem;
+}
+
+.file-drop-text-large p {
+    color: #64748b;
+    font-size: 1.2rem;
+}
+
+/* Informations fichier sélectionné - GRANDE VERSION */
+.file-selected-info-large {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    border: 2px solid #86efac;
+    border-radius: 16px;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.file-selected-info-large h5 {
+    color: #166534;
+    font-size: 1.3rem;
+}
+
+.file-selected-info-large p {
+    color: #15803d;
+    font-size: 1rem;
+}
+
+/* Bouton parcourir amélioré */
+.file-drop-text-large .btn {
+    font-size: 1.2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+    .file-drop-text-large .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+    }
+
+/* Gradient pour les en-têtes */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1d4ed8 100%) !important;
+}
+
+/* Styles pour les cartes */
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-header {
+    border-bottom: none;
+}
+
+.rounded-4 {
+    border-radius: 20px !important;
+}
+
+/* Boutons avec animations */
+.btn {
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+.btn-lg {
+    padding: 0.75rem 2rem;
+}
+
+/* Animation pour le bouton de soumission */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1d4ed8 100%);
+    border: none;
+}
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    }
+
+/* Styles pour la barre de progression */
+.progress {
+    border-radius: 10px;
+    background: #e5e7eb;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, #06b6d4 100%);
+}
+
+/* Zone de statut */
+#statusArea {
+    animation: slideInUp 0.5s ease;
+}
+
+#resultArea {
+    animation: slideInUp 0.5s ease;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Étapes de traitement */
+.processing-step {
+    padding: 0.75rem 1rem;
+    border-left: 3px solid transparent;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+    .processing-step.completed {
+        border-left-color: var(--success-color);
+        background: rgba(5, 150, 105, 0.1);
+        color: #065f46;
+    }
+
+    .processing-step.active {
+        border-left-color: var(--primary-color);
+        background: rgba(37, 99, 235, 0.1);
+        color: #1e40af;
+    }
+
+/* Alertes personnalisées */
+.alert {
+    border-radius: 12px;
+    border: none;
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: #1e40af;
+}
+
+/* Footer */
+.footer {
+    background: white;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    color: #64748b;
+}
+
+/* Hash display */
+.text-monospace {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    word-break: break-all;
+    background: #f1f5f9;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .text-monospace:hover {
+        background: #e2e8f0;
+    }
+
+/* Ombres améliorées */
+.shadow-lg {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        margin: 1rem 0.5rem;
+    }
+
+    .file-drop-area-large {
+        min-height: 300px;
+        padding: 2rem 1rem;
+    }
+
+    .file-drop-icon-large i {
+        font-size: 4rem !important;
+    }
+
+    .file-drop-text-large h3 {
+        font-size: 1.3rem;
+    }
+
+    .file-drop-text-large .btn {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .display-3 {
+        font-size: 2.5rem;
+    }
+
+    .text-monospace {
+        font-size: 0.65rem;
+    }
+}
+
+/* Animation de chargement */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f4f6;
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation pour les cartes de résultat */
+.result-card-enter {
+    animation: cardEnter 0.5s ease;
+}
+
+@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Amélioration visuelle des icônes */
+.fa-check-circle {
+    text-shadow: 0 2px 4px rgba(5, 150, 105, 0.3);
+}
+
+/* Amélioration des transitions globales */
+* {
+    transition: all 0.2s ease;
+}
+
+button, a, input {
+    transition: all 0.3s ease;
+}

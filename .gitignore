@@ -1,0 +1,36 @@
+# Fichiers binaires et objets
+bin/
+obj/
+
+# Dossier de configuration Visual Studio
+.vs/
+*.user
+*.suo
+
+# Fichiers de build
+*.dll
+*.exe
+*.pdb
+
+# Fichiers temporaires
+*.log
+*.tmp
+
+# Dossiers de publication
+publish/
+out/
+
+# Fichiers de dépendances
+packages/
+*.nupkg
+
+# Configuration utilisateur
+appsettings.Development.json
+appsettings.Local.json
+
+# Fichiers système
+Thumbs.db
+Desktop.ini
+
+# Fichiers de cache
+*.vsidx

@@ -1,0 +1,28 @@
+﻿{
+  "FileName": "SECURED_20250928_155229_homere_merged_Final.pdf",
+  "ProcessedBy": "Mon Test",
+  "ProcessedAt": "2025-09-28T13:52:29.7296861Z",
+  "OriginalHash": "6789c0b617d33ecbcd71b161e29bd735bfb19fc1a220ee8a58d56d2d23ac34e6",
+  "ProcessedHash": "822e077701317b2ce9d35e0a11f8653a34ac7044149dbfc5af9253f7bb092dbe",
+  "SecurityMeasures": [
+    "Metadata Cleanup",
+    "Digital Watermark",
+    "PAdES Digital Signature",
+    "RFC3161 Timestamp",
+    "Preview Rasterization"
+  ],
+  "Timestamp": "RFC3161-2025-09-28T13:52:29.729Z-MOCK",
+  "Version": "1.0",
+  "Application": "PDF Security App",
+  "ProcessingSteps": [
+    "1. File validation and upload",
+    "2. SHA256 hash calculation",
+    "3. Metadata cleaning",
+    "4. Watermark application",
+    "5. Digital signature (PAdES)",
+    "6. RFC3161 timestamp generation",
+    "7. Preview image generation",
+    "8. Final hash calculation",
+    "9. Proof file generation"
+  ]
+}
