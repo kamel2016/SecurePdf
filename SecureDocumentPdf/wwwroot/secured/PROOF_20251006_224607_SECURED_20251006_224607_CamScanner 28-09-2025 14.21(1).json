@@ -1,0 +1,71 @@
+﻿{
+  "Document": {
+    "FileName": "SECURED_20251006_224607_CamScanner 28-09-2025 14.21(1).pdf",
+    "OriginalName": "CamScanner 28-09-2025 14.21(1).pdf",
+    "ProcessedBy": "test",
+    "ProcessedAt": "2025-10-06T20:46:07.0615625Z",
+    "ProcessingDuration": "Calculé en temps réel"
+  },
+  "Integrity": {
+    "OriginalSHA256": "b023885e07b9dd79a0abfb39b3872e7c9bb5f51c64aeafbd7003e2e84182f711",
+    "ProcessedSHA256": "807308370dde7c38186cd707ca7b9997f3fbee5ffe1e20821467e41fb64355f2",
+    "Algorithm": "SHA-256",
+    "Verified": true
+  },
+  "SecurityMeasures": [
+    "1. Nettoyage complet des métadonnées sensibles",
+    "2. Application de watermark de sécurité multi-couches",
+    "3. Signature numérique PAdES avec certificat X.509",
+    "4. Chiffrement AES 128-bit avec protection par mot de passe",
+    "5. Horodatage certifié RFC3161",
+    "6. Génération de prévisualisations sécurisées",
+    "7. Validation cryptographique d'intégrité"
+  ],
+  "PasswordProtection": {
+    "Enabled": true,
+    "EncryptionAlgorithm": "AES",
+    "EncryptionLevel": "128-bit",
+    "OwnerPasswordRequired": true,
+    "UserPasswordRequired": false,
+    "DocumentSecurityLevel": "Maximum",
+    "Permissions": {
+      "OpenDocument": "✅ Autorisé (sans mot de passe)",
+      "ViewDocument": "✅ Autorisé",
+      "PrintLowQuality": "✅ Autorisé",
+      "PrintHighQuality": "❌ Interdit",
+      "ModifyDocument": "❌ Interdit (mot de passe propriétaire requis)",
+      "CopyContent": "❌ Interdit",
+      "ExtractContent": "❌ Interdit",
+      "ModifyAnnotations": "❌ Interdit",
+      "FillForms": "❌ Interdit",
+      "ExtractForAccessibility": "❌ Interdit",
+      "AssembleDocument": "❌ Interdit"
+    }
+  },
+  "Timestamp": "RFC3161-2025-10-06T20:46:07.062Z-NONCE:22ef232878eb4dc5-MOCK",
+  "Application": {
+    "Name": "PDF Security App",
+    "Version": "2.0 - Enhanced Protection",
+    "Framework": ".NET 8.0",
+    "Libraries": [
+      "PdfSharp 6.0 - Manipulation PDF",
+      "BouncyCastle 2.2.1 - Cryptographie",
+      "ImageSharp 3.0 - Traitement d'images",
+      "Serilog 8.0 - Logging sécurisé"
+    ]
+  },
+  "SecurityNotices": {
+    "CriticalWarning": "⚠️ Ce document est protégé par des mesures de sécurité avancées",
+    "PasswordInfo": "\uD83D\uDD11 Le mot de passe propriétaire est stocké dans un fichier séparé",
+    "IntegrityVerification": "✅ Vérifier les hash SHA-256 pour garantir l'intégrité",
+    "LegalNotice": "\uD83D\uDCDC Toute modification non autorisée est interdite et traçable"
+  },
+  "ProofMetadata": {
+    "ProofType": "Cryptographic Certificate",
+    "Standard": "RFC3161 / PAdES",
+    "GeneratedAt": "2025-10-06T20:46:07.0643472Z",
+    "ValidUntil": "2030-10-06T20:46:07.0643473Z",
+    "CertificateAuthority": "PDF Security App - Self-Signed",
+    "UniqueIdentifier": "bbe164cb-7f7e-43b5-85de-303304742c61"
+  }
+}

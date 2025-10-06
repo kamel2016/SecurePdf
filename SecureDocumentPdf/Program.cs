@@ -3,6 +3,7 @@ using Serilog.Events;
 using SecureDocumentPdf.Services;
 using SecureDocumentPdf.Services.Interface;
 using SecureDocumentPdf.Services;
+using Microsoft.AspNetCore.StaticFiles;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -67,7 +68,26 @@ else
     Log.Information("Mode : Development");
 }
 
-app.UseHttpsRedirection();
+var provider = new FileExtensionContentTypeProvider();
+
+provider.Mappings[".js"] = "application/javascript";       // JS
+provider.Mappings[".css"] = "text/css";                    // CSS
+provider.Mappings[".map"] = "application/json";            // source maps si présentes
+provider.Mappings[".woff2"] = "font/woff2";               // fonts
+provider.Mappings[".woff"] = "font/woff";
+provider.Mappings[".ttf"] = "font/ttf";
+provider.Mappings[".eot"] = "application/vnd.ms-fontobject";
+provider.Mappings[".svg"] = "image/svg+xml";
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    ContentTypeProvider = provider,
+    ServeUnknownFileTypes = true,      // sert tous les fichiers même si type inconnu
+    DefaultContentType = "application/octet-stream"
+});
+
+
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 

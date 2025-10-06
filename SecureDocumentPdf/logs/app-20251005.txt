@@ -1,0 +1,13 @@
+[2025-10-05 00:04:57 INF] ========================================
+[2025-10-05 00:04:57 INF] Application PDF Security démarrée
+[2025-10-05 00:04:57 INF] ========================================
+[2025-10-05 00:04:57 INF] Mode : Development
+[2025-10-05 00:04:58 INF] Dossiers créés avec succès
+[2025-10-05 00:04:58 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-05 00:04:58 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-05 00:04:58 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-05 00:04:58 INF] ========================================
+[2025-10-05 00:04:58 INF] Application prête !
+[2025-10-05 00:04:58 INF] URL : https://localhost:7001
+[2025-10-05 00:04:58 INF] Environment : Development
+[2025-10-05 00:04:58 INF] ========================================

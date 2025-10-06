@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\SecurisationDocument.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BouncyCastle" Version="1.8.9" />
     <PackageReference Include="PDFsharp" Version="6.2.2" />
     <PackageReference Include="Serilog" Version="4.3.0" />
