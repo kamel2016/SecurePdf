@@ -4,8 +4,12 @@ using SecureDocumentPdf.Services;
 using SecureDocumentPdf.Services.Interface;
 using SecureDocumentPdf.Services;
 using Microsoft.AspNetCore.StaticFiles;
+using QuestPDF.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure QuestPDF license AVANT tout appel à QuestPDF
+QuestPDF.Settings.License = LicenseType.Community;
 
 // ========================================
 // CONFIGURATION DE SERILOG (LOGGING)
@@ -36,6 +40,9 @@ Log.Information("========================================");
 
 // Services Razor Pages
 builder.Services.AddRazorPages();
+
+// Enregistrer IHttpContextAccessor AVANT les services qui en dépendent
+builder.Services.AddHttpContextAccessor();
 
 // Service personnalisé de traitement PDF
 builder.Services.AddScoped<IPdfSecurityService, PdfSecurityService>();

@@ -36,6 +36,14 @@ namespace SecureDocumentPdf.Models
         /// </summary>
         public string? ErrorDetails { get; set; }
 
+        public string QRCodePath { get; set; }
+        public string AuditLogPath { get; set; }
+        public string DocumentId { get; set; }
+        public string BiometricSignature { get; set; }
+        public Dictionary<int, string> PageHashes { get; set; }
+        public List<string> HashChain { get; set; }
+        public string IpAddress { get; set; }
+        public DateTime? ExpirationDate { get; set; }
         /// <summary>
         /// Liste des étapes de traitement effectuées avec succès
         /// </summary>

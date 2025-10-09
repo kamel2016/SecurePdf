@@ -13,7 +13,7 @@ namespace SecureDocumentPdf.Services.Interface
         /// <param name="file">Fichier PDF à traiter</param>
         /// <param name="userName">Nom de l'utilisateur</param>
         /// <returns>Résultat du traitement</returns>
-        Task<UploadResult> ProcessPdfAsync(IFormFile file, string userName);
+        Task<UploadResult> ProcessPdfAsync(IFormFile file, string userName, SecurityOptions options);
 
         /// <summary>
         /// Calcule le hash SHA256 d'un fichier
