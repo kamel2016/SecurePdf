@@ -1095,7 +1095,7 @@ namespace SecureDocumentPdf.Pages
 
                     // Texte et données
                     ".txt" => TextToPdfConverter.ConvertToPdf(file),
-                    ".csv" => CsvToPdfConverter.ConvertToPdf(file),
+                    ".csv" => CsvToPdfConverter.ConvertToPdf(file), 
                     ".json" => JsonToPdfConverter.ConvertToPdf(file),
                     ".xml" => XmlToPdfConverter.ConvertToPdf(file),
 
