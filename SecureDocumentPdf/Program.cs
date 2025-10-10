@@ -44,6 +44,8 @@ builder.Services.AddRazorPages();
 // Enregistrer IHttpContextAccessor AVANT les services qui en dépendent
 builder.Services.AddHttpContextAccessor();
 
+builder.Services.AddControllers();
+
 // Service personnalisé de traitement PDF
 builder.Services.AddScoped<IPdfSecurityService, PdfSecurityService>();
 

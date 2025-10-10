@@ -1,0 +1,134 @@
+﻿{
+  "DocumentId": "ecb47a4a-1d4f-4bb7-8251-3b210208aa06",
+  "FileName": "SECURED_20251010_123429_Menu_Restaurant.pdf",
+  "User": "Mon Test",
+  "Timestamp": "2025-10-10T10:34:29.3383174Z",
+  "Steps": [
+    {
+      "StepNumber": 1,
+      "Action": "✅ Validation PDF réussie",
+      "CompletedAt": "2025-10-10T10:34:29.3395887Z"
+    },
+    {
+      "StepNumber": 2,
+      "Action": "✅ Sauvegarde fichier original sécurisée",
+      "CompletedAt": "2025-10-10T10:34:29.8402169Z"
+    },
+    {
+      "StepNumber": 3,
+      "Action": "✅ Hash SHA256 original: 02e4b2eb7881cb19...",
+      "CompletedAt": "2025-10-10T10:34:30.3402402Z"
+    },
+    {
+      "StepNumber": 4,
+      "Action": "✅ Métadonnées sensibles supprimées",
+      "CompletedAt": "2025-10-10T10:34:30.8402404Z"
+    },
+    {
+      "StepNumber": 5,
+      "Action": "\uD83D\uDD0D Watermark invisible et empreinte numérique ajoutés",
+      "CompletedAt": "2025-10-10T10:34:31.3402405Z"
+    },
+    {
+      "StepNumber": 6,
+      "Action": "\uD83D\uDD22 Hash généré pour 0 pages individuellement",
+      "CompletedAt": "2025-10-10T10:34:31.8402415Z"
+    },
+    {
+      "StepNumber": 7,
+      "Action": "\uD83C\uDF0D Géolocalisation et métadonnées contextuelles enregistrées",
+      "CompletedAt": "2025-10-10T10:34:32.3402415Z"
+    },
+    {
+      "StepNumber": 8,
+      "Action": "⏰ Date d'expiration: 12/10/2025",
+      "CompletedAt": "2025-10-10T10:34:32.8402416Z"
+    },
+    {
+      "StepNumber": 9,
+      "Action": "\uD83C\uDF10 Restriction IP enregistrée: 127.0.0.1",
+      "CompletedAt": "2025-10-10T10:34:33.3402417Z"
+    },
+    {
+      "StepNumber": 10,
+      "Action": "\uD83D\uDCC4 Filigrane unique appliqué sur chaque page",
+      "CompletedAt": "2025-10-10T10:34:33.8402418Z"
+    },
+    {
+      "StepNumber": 11,
+      "Action": "\uD83D\uDCF8 Protection contre capture d'écran activée",
+      "CompletedAt": "2025-10-10T10:34:34.3402423Z"
+    },
+    {
+      "StepNumber": 12,
+      "Action": "✅ Watermark de sécurité principal appliqué",
+      "CompletedAt": "2025-10-10T10:34:34.8402423Z"
+    },
+    {
+      "StepNumber": 13,
+      "Action": "\uD83D\uDDA8️ Watermark d'impression ajouté (visible uniquement imprimé)",
+      "CompletedAt": "2025-10-10T10:34:35.3402424Z"
+    },
+    {
+      "StepNumber": 14,
+      "Action": "✅ Signature numérique PAdES appliquée",
+      "CompletedAt": "2025-10-10T10:34:35.8402424Z"
+    },
+    {
+      "StepNumber": 15,
+      "Action": "\uD83E\uDDEC Signature biométrique: BIO-SIG-PpCBXT8E/QKN...",
+      "CompletedAt": "2025-10-10T10:34:36.3402425Z"
+    },
+    {
+      "StepNumber": 16,
+      "Action": "\uD83D\uDD12 Protection par mot de passe - PDF verrouillé contre modification",
+      "CompletedAt": "2025-10-10T10:34:36.8402426Z"
+    },
+    {
+      "StepNumber": 17,
+      "Action": "⛓️ Chaîne de hash blockchain générée (5 blocs)",
+      "CompletedAt": "2025-10-10T10:34:37.3402427Z"
+    },
+    {
+      "StepNumber": 18,
+      "Action": "✅ Horodatage RFC3161: RFC3161-2025-10-10T10:34:24.664Z-NONCE:4a06999a1df94297-MOCK",
+      "CompletedAt": "2025-10-10T10:34:37.840253Z"
+    },
+    {
+      "StepNumber": 19,
+      "Action": "\uD83D\uDCF1 QR Code de vérification généré",
+      "CompletedAt": "2025-10-10T10:34:38.3402531Z"
+    },
+    {
+      "StepNumber": 20,
+      "Action": "✅ Images de prévisualisation générées",
+      "CompletedAt": "2025-10-10T10:34:38.8402531Z"
+    },
+    {
+      "StepNumber": 21,
+      "Action": "✅ Hash final calculé et vérifié",
+      "CompletedAt": "2025-10-10T10:34:39.3402532Z"
+    },
+    {
+      "StepNumber": 22,
+      "Action": "✅ PDF sécurisé déplacé vers le coffre-fort numérique",
+      "CompletedAt": "2025-10-10T10:34:39.8402532Z"
+    }
+  ],
+  "DeviceInfo": {
+    "OS": "Microsoft Windows NT 10.0.26100.0",
+    "MachineName": "LAPTOP-RV9E34LB",
+    "ProcessorCount": 8,
+    "UserDomain": "LAPTOP-RV9E34LB",
+    "Framework": "8.0.8"
+  },
+  "SecurityLevel": "MAXIMUM v3.0",
+  "Compliance": [
+    "RGPD",
+    "ISO27001",
+    "eIDAS",
+    "PAdES",
+    "RFC3161"
+  ],
+  "TotalOperations": 22
+}

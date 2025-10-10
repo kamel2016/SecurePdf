@@ -1693,7 +1693,7 @@ namespace SecureDocumentPdf.Services
             {
                 _logger.LogInformation("📱 Génération QR Code");
 
-                var verificationUrl = $"https://votre-app.com/verify?id={documentId}&hash={documentHash[..16]}&user={Uri.EscapeDataString(userName)}";
+                var verificationUrl = $"https://securepdf-iwoz.onrender.com/verify?id={documentId}&hash={documentHash[..16]}&user={Uri.EscapeDataString(userName)}";
 
                 using var qrGenerator = new QRCodeGenerator();
                 var qrCodeData = qrGenerator.CreateQrCode(verificationUrl, QRCodeGenerator.ECCLevel.Q);
