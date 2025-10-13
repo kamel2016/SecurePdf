@@ -1,0 +1,129 @@
+﻿{
+  "DocumentId": "868bfefe-915b-4a3e-9e82-b5f1de7d124f",
+  "FileName": "SECURED_20251013_223835_AUDIT_20251013_215301_66c585ad.pdf",
+  "User": "Test",
+  "Timestamp": "2025-10-13T20:38:35.1492093Z",
+  "Steps": [
+    {
+      "StepNumber": 1,
+      "Action": "✅ Validation PDF réussie",
+      "CompletedAt": "2025-10-13T20:38:35.1515143Z"
+    },
+    {
+      "StepNumber": 2,
+      "Action": "✅ Sauvegarde fichier original sécurisée",
+      "CompletedAt": "2025-10-13T20:38:35.6522876Z"
+    },
+    {
+      "StepNumber": 3,
+      "Action": "✅ Hash SHA256 original: 994ea6f7cd6e3c19...",
+      "CompletedAt": "2025-10-13T20:38:36.1523776Z"
+    },
+    {
+      "StepNumber": 4,
+      "Action": "✅ Métadonnées sensibles supprimées",
+      "CompletedAt": "2025-10-13T20:38:36.6523784Z"
+    },
+    {
+      "StepNumber": 5,
+      "Action": "\uD83D\uDD0D Watermark invisible et empreinte numérique ajoutés",
+      "CompletedAt": "2025-10-13T20:38:37.1523787Z"
+    },
+    {
+      "StepNumber": 6,
+      "Action": "\uD83D\uDD22 Hash généré pour 0 pages individuellement",
+      "CompletedAt": "2025-10-13T20:38:37.6523806Z"
+    },
+    {
+      "StepNumber": 7,
+      "Action": "\uD83C\uDF0D Géolocalisation et métadonnées contextuelles enregistrées",
+      "CompletedAt": "2025-10-13T20:38:38.1523812Z"
+    },
+    {
+      "StepNumber": 8,
+      "Action": "\uD83C\uDF10 Restriction IP enregistrée: 127.0.0.1",
+      "CompletedAt": "2025-10-13T20:38:38.6523815Z"
+    },
+    {
+      "StepNumber": 9,
+      "Action": "\uD83D\uDCC4 Filigrane unique appliqué sur chaque page",
+      "CompletedAt": "2025-10-13T20:38:39.1523818Z"
+    },
+    {
+      "StepNumber": 10,
+      "Action": "\uD83D\uDCF8 Protection contre capture d'écran activée",
+      "CompletedAt": "2025-10-13T20:38:39.6523825Z"
+    },
+    {
+      "StepNumber": 11,
+      "Action": "✅ Watermark de sécurité principal appliqué",
+      "CompletedAt": "2025-10-13T20:38:40.1523828Z"
+    },
+    {
+      "StepNumber": 12,
+      "Action": "\uD83D\uDDA8️ Watermark d'impression ajouté (visible uniquement imprimé)",
+      "CompletedAt": "2025-10-13T20:38:40.6523833Z"
+    },
+    {
+      "StepNumber": 13,
+      "Action": "✅ Signature numérique PAdES appliquée",
+      "CompletedAt": "2025-10-13T20:38:41.1523837Z"
+    },
+    {
+      "StepNumber": 14,
+      "Action": "\uD83E\uDDEC Signature biométrique: BIO-SIG-A3iDSeDW2jeQ...",
+      "CompletedAt": "2025-10-13T20:38:41.652384Z"
+    },
+    {
+      "StepNumber": 15,
+      "Action": "\uD83D\uDD12 Protection par mot de passe - PDF verrouillé contre modification",
+      "CompletedAt": "2025-10-13T20:38:42.1523843Z"
+    },
+    {
+      "StepNumber": 16,
+      "Action": "⛓️ Chaîne de hash blockchain générée (5 blocs)",
+      "CompletedAt": "2025-10-13T20:38:42.6523846Z"
+    },
+    {
+      "StepNumber": 17,
+      "Action": "✅ Horodatage RFC3161: RFC3161-2025-10-13T20:38:32.247Z-NONCE:c41c872b621d42bd-MOCK",
+      "CompletedAt": "2025-10-13T20:38:43.152385Z"
+    },
+    {
+      "StepNumber": 18,
+      "Action": "\uD83D\uDCF1 QR Code de vérification généré",
+      "CompletedAt": "2025-10-13T20:38:43.6523857Z"
+    },
+    {
+      "StepNumber": 19,
+      "Action": "✅ Images de prévisualisation générées",
+      "CompletedAt": "2025-10-13T20:38:44.152386Z"
+    },
+    {
+      "StepNumber": 20,
+      "Action": "✅ Hash final calculé et vérifié",
+      "CompletedAt": "2025-10-13T20:38:44.6523864Z"
+    },
+    {
+      "StepNumber": 21,
+      "Action": "✅ PDF sécurisé déplacé vers le coffre-fort numérique",
+      "CompletedAt": "2025-10-13T20:38:45.1523867Z"
+    }
+  ],
+  "DeviceInfo": {
+    "OS": "Microsoft Windows NT 10.0.26100.0",
+    "MachineName": "LAPTOP-RV9E34LB",
+    "ProcessorCount": 8,
+    "UserDomain": "LAPTOP-RV9E34LB",
+    "Framework": "8.0.8"
+  },
+  "SecurityLevel": "MAXIMUM v3.0",
+  "Compliance": [
+    "RGPD",
+    "ISO27001",
+    "eIDAS",
+    "PAdES",
+    "RFC3161"
+  ],
+  "TotalOperations": 21
+}

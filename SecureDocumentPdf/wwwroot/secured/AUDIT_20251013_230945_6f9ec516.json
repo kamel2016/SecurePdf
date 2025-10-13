@@ -1,0 +1,129 @@
+﻿{
+  "DocumentId": "6f9ec516-e8bb-405d-b66c-20e6b8e85713",
+  "FileName": "SECURED_20251013_230945_Menu_Grillades.pdf",
+  "User": "Test",
+  "Timestamp": "2025-10-13T21:09:45.7543299Z",
+  "Steps": [
+    {
+      "StepNumber": 1,
+      "Action": "✅ Validation PDF réussie",
+      "CompletedAt": "2025-10-13T21:09:45.7553534Z"
+    },
+    {
+      "StepNumber": 2,
+      "Action": "✅ Sauvegarde fichier original sécurisée",
+      "CompletedAt": "2025-10-13T21:09:46.2562035Z"
+    },
+    {
+      "StepNumber": 3,
+      "Action": "✅ Hash SHA256 original: d32f10c0cbf117a1...",
+      "CompletedAt": "2025-10-13T21:09:46.7562852Z"
+    },
+    {
+      "StepNumber": 4,
+      "Action": "✅ Métadonnées sensibles supprimées",
+      "CompletedAt": "2025-10-13T21:09:47.2562857Z"
+    },
+    {
+      "StepNumber": 5,
+      "Action": "\uD83D\uDD0D Watermark invisible et empreinte numérique ajoutés",
+      "CompletedAt": "2025-10-13T21:09:47.7562859Z"
+    },
+    {
+      "StepNumber": 6,
+      "Action": "\uD83D\uDD22 Hash généré pour 0 pages individuellement",
+      "CompletedAt": "2025-10-13T21:09:48.256287Z"
+    },
+    {
+      "StepNumber": 7,
+      "Action": "\uD83C\uDF0D Géolocalisation et métadonnées contextuelles enregistrées",
+      "CompletedAt": "2025-10-13T21:09:48.7562871Z"
+    },
+    {
+      "StepNumber": 8,
+      "Action": "\uD83C\uDF10 Restriction IP enregistrée: 127.0.0.1",
+      "CompletedAt": "2025-10-13T21:09:49.2562872Z"
+    },
+    {
+      "StepNumber": 9,
+      "Action": "\uD83D\uDCC4 Filigrane unique appliqué sur chaque page",
+      "CompletedAt": "2025-10-13T21:09:49.7562874Z"
+    },
+    {
+      "StepNumber": 10,
+      "Action": "\uD83D\uDCF8 Protection contre capture d'écran activée",
+      "CompletedAt": "2025-10-13T21:09:50.2562877Z"
+    },
+    {
+      "StepNumber": 11,
+      "Action": "✅ Watermark de sécurité principal appliqué",
+      "CompletedAt": "2025-10-13T21:09:50.7562879Z"
+    },
+    {
+      "StepNumber": 12,
+      "Action": "\uD83D\uDDA8️ Watermark d'impression ajouté (visible uniquement imprimé)",
+      "CompletedAt": "2025-10-13T21:09:51.256288Z"
+    },
+    {
+      "StepNumber": 13,
+      "Action": "✅ Signature numérique PAdES appliquée",
+      "CompletedAt": "2025-10-13T21:09:51.7562883Z"
+    },
+    {
+      "StepNumber": 14,
+      "Action": "\uD83E\uDDEC Signature biométrique: BIO-SIG-JpfGWpsBBKLf...",
+      "CompletedAt": "2025-10-13T21:09:52.2562884Z"
+    },
+    {
+      "StepNumber": 15,
+      "Action": "\uD83D\uDD12 Protection par mot de passe - PDF verrouillé contre modification",
+      "CompletedAt": "2025-10-13T21:09:52.7562885Z"
+    },
+    {
+      "StepNumber": 16,
+      "Action": "⛓️ Chaîne de hash blockchain générée (5 blocs)",
+      "CompletedAt": "2025-10-13T21:09:53.2562887Z"
+    },
+    {
+      "StepNumber": 17,
+      "Action": "✅ Horodatage RFC3161: RFC3161-2025-10-13T21:09:43.950Z-NONCE:07a5ae65b1d64831-MOCK",
+      "CompletedAt": "2025-10-13T21:09:53.7562888Z"
+    },
+    {
+      "StepNumber": 18,
+      "Action": "\uD83D\uDCF1 QR Code de vérification généré",
+      "CompletedAt": "2025-10-13T21:09:54.256289Z"
+    },
+    {
+      "StepNumber": 19,
+      "Action": "✅ Images de prévisualisation générées",
+      "CompletedAt": "2025-10-13T21:09:54.7562891Z"
+    },
+    {
+      "StepNumber": 20,
+      "Action": "✅ Hash final calculé et vérifié",
+      "CompletedAt": "2025-10-13T21:09:55.2562892Z"
+    },
+    {
+      "StepNumber": 21,
+      "Action": "✅ PDF sécurisé déplacé vers le coffre-fort numérique",
+      "CompletedAt": "2025-10-13T21:09:55.7562895Z"
+    }
+  ],
+  "DeviceInfo": {
+    "OS": "Microsoft Windows NT 10.0.26100.0",
+    "MachineName": "LAPTOP-RV9E34LB",
+    "ProcessorCount": 8,
+    "UserDomain": "LAPTOP-RV9E34LB",
+    "Framework": "8.0.8"
+  },
+  "SecurityLevel": "MAXIMUM v3.0",
+  "Compliance": [
+    "RGPD",
+    "ISO27001",
+    "eIDAS",
+    "PAdES",
+    "RFC3161"
+  ],
+  "TotalOperations": 21
+}

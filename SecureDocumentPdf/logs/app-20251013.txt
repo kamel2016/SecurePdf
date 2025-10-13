@@ -1,0 +1,1340 @@
+[2025-10-13 21:52:04 INF] ========================================
+[2025-10-13 21:52:04 INF] Application PDF Security démarrée
+[2025-10-13 21:52:04 INF] ========================================
+[2025-10-13 21:52:05 INF] Mode : Development
+[2025-10-13 21:52:06 INF] Dossiers créés avec succès
+[2025-10-13 21:52:06 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 21:52:06 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 21:52:06 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 21:52:06 INF] ========================================
+[2025-10-13 21:52:06 INF] Application prête !
+[2025-10-13 21:52:06 INF] URL : https://localhost:7001
+[2025-10-13 21:52:06 INF] Environment : Development
+[2025-10-13 21:52:06 INF] ========================================
+[2025-10-13 21:52:10 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 21:52:47 INF] 📤 Soumission formulaire - Utilisateur: Mon Test
+[2025-10-13 21:52:47 INF] 📋 Type détecté: Image
+[2025-10-13 21:52:47 INF] 🔄 Début traitement - Type: Image, Taille: 173296 bytes
+[2025-10-13 21:52:47 INF] 🔄 Conversion vers PDF nécessaire...
+[2025-10-13 21:52:47 INF] 🔄 Conversion .jpg → PDF
+[2025-10-13 21:52:48 INF] ✅ Conversion PDF réussie: fiche article rempli.pdf
+[2025-10-13 21:52:48 INF] 🔒 Lancement sécurisation maximale...
+[2025-10-13 21:52:48 INF] 🔐 [v3.0] Début du traitement PDF ULTRA-SÉCURISÉ pour Mon Test: fiche article rempli.pdf
+[2025-10-13 21:52:48 INF] 🧹 Nettoyage des métadonnées: d45849bd-6162-4df2-8a10-137300996a9b_fiche article rempli.pdf
+[2025-10-13 21:52:49 INF] ✨ Métadonnées nettoyées avec succès: d45849bd-6162-4df2-8a10-137300996a9b_fiche article rempli_cleaned.pdf
+[2025-10-13 21:52:49 INF] 🔍 Ajout du watermark invisible et empreinte
+[2025-10-13 21:52:49 INF] ✅ Watermark invisible ajouté
+[2025-10-13 21:52:49 INF] 🔢 Génération des hash par page
+[2025-10-13 21:52:49 ERR] ❌ Erreur génération hash pages
+System.InvalidOperationException: A PDF document must be opened with PdfDocumentOpenMode.Import to import pages from it.
+   at PdfSharp.Pdf.PdfPages.ImportExternalPage(PdfPage importPage)
+   at PdfSharp.Pdf.PdfPages.Insert(Int32 index, PdfPage page)
+   at PdfSharp.Pdf.PdfPages.Add(PdfPage page)
+   at PdfSharp.Pdf.PdfDocument.AddPage(PdfPage page)
+   at SecureDocumentPdf.Services.PdfSecurityService.GenerateAndSavePageHashesAsync(String pdfPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1420
+[2025-10-13 21:52:49 INF] 🌍 Ajout géolocalisation
+[2025-10-13 21:52:49 INF] ✅ Géolocalisation ajoutée
+[2025-10-13 21:52:49 INF] 🌐 Enregistrement IP: 127.0.0.1
+[2025-10-13 21:52:49 INF] ✅ IP enregistrée
+[2025-10-13 21:52:49 INF] 📄 Application filigrane dynamique
+[2025-10-13 21:52:49 ERR] ❌ Erreur filigrane dynamique
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplyDynamicPageWatermarksAsync(String inputPath, String userName, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1570
+[2025-10-13 21:52:49 INF] 📸 Ajout protection capture écran
+[2025-10-13 21:52:50 ERR] ❌ Erreur protection écran
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddScreenCaptureProtectionAsync(String inputPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1617
+[2025-10-13 21:52:50 INF] 🏷️ Application du watermark de sécurité: d45849bd-6162-4df2-8a10-137300996a9b_fiche article rempli_cleaned_invisible.pdf
+[2025-10-13 21:52:50 ERR] ❌ Erreur lors de l'application du watermark: C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads\d45849bd-6162-4df2-8a10-137300996a9b_fiche article rempli_cleaned_invisible.pdf
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplySecurityWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 230
+[2025-10-13 21:52:50 INF] 🖨️ Ajout watermark impression
+[2025-10-13 21:52:50 ERR] ❌ Erreur watermark impression
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddPrintOnlyWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1662
+[2025-10-13 21:52:51 INF] 📜 Application de la signature numérique PAdES: d45849bd-6162-4df2-8a10-137300996a9b_fiche article rempli_cleaned_invisible.pdf
+[2025-10-13 21:52:53 INF] 🔐 Signature numérique PAdES simulée appliquée: d45849bd-6162-4df2-8a10-137300996a9b_fiche article rempli_cleaned_invisible_signed.pdf
+[2025-10-13 21:52:53 INF] 📋 Certificat généré - Subject: CN=Mon Test,O=PDF Security User,C=FR
+[2025-10-13 21:52:53 INF] 🔒 Application de la protection par chiffrement: d45849bd-6162-4df2-8a10-137300996a9b_fiche article rempli_cleaned_invisible_signed.pdf
+[2025-10-13 21:52:53 INF] 🔐 PDF protégé par chiffrement 128-bit. Mot de passe: PDF_***sNm
+[2025-10-13 21:52:53 INF] 🔑 Mot de passe sauvegardé de manière sécurisée: PASSWORD_d45849bd-6162-4df2-8a10-137300996a9b_fiche article rempli_cleaned_invisible_signed_protected.json
+[2025-10-13 21:52:53 INF] ✅ PDF protégé validé - Lecture OK, modification bloquée
+[2025-10-13 21:52:53 INF] ✅ Protection validée - PDF verrouillé avec succès
+[2025-10-13 21:52:53 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T19:52:53.441Z-NONCE:65e50d89c6644fb3-MOCK
+[2025-10-13 21:52:54 INF] 📱 Génération QR Code
+[2025-10-13 21:52:55 INF] ✅ QR Code généré
+[2025-10-13 21:52:55 INF] 🖼️ Génération prévisualisations
+[2025-10-13 21:53:01 INF] 📸 Prévisualisation générée
+[2025-10-13 21:53:01 INF] 📋 Génération journal d'audit
+[2025-10-13 21:53:01 INF] ✅ Journal d'audit généré
+[2025-10-13 21:53:01 INF] 📋 Génération certificat de preuve enrichi
+[2025-10-13 21:53:01 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T19:53:01.639Z-NONCE:e17e3c2e90374759-MOCK
+[2025-10-13 21:53:01 INF] ✅ Certificat de preuve enrichi généré
+[2025-10-13 21:53:01 INF] 🎉 Traitement PDF ULTRA-SÉCURISÉ terminé avec succès pour Mon Test en 13.10s
+[2025-10-13 21:53:01 INF] ✅ Traitement réussi - PDF sécurisé: /secured/SECURED_20251013_215301_fiche article rempli.pdf, Durée: 13.1011192s
+[2025-10-13 22:05:56 INF] ========================================
+[2025-10-13 22:05:56 INF] Application PDF Security démarrée
+[2025-10-13 22:05:56 INF] ========================================
+[2025-10-13 22:05:57 INF] Mode : Development
+[2025-10-13 22:05:57 INF] Dossiers créés avec succès
+[2025-10-13 22:05:57 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:05:57 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:05:57 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:05:57 INF] ========================================
+[2025-10-13 22:05:57 INF] Application prête !
+[2025-10-13 22:05:57 INF] URL : https://localhost:7001
+[2025-10-13 22:05:57 INF] Environment : Development
+[2025-10-13 22:05:57 INF] ========================================
+[2025-10-13 22:05:59 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:06:29 INF] ========================================
+[2025-10-13 22:06:29 INF] Application PDF Security démarrée
+[2025-10-13 22:06:29 INF] ========================================
+[2025-10-13 22:06:30 INF] Mode : Development
+[2025-10-13 22:06:30 INF] Dossiers créés avec succès
+[2025-10-13 22:06:30 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:06:30 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:06:30 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:06:30 INF] ========================================
+[2025-10-13 22:06:30 INF] Application prête !
+[2025-10-13 22:06:30 INF] URL : https://localhost:7001
+[2025-10-13 22:06:30 INF] Environment : Development
+[2025-10-13 22:06:30 INF] ========================================
+[2025-10-13 22:06:32 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:06:57 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:06:59 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:07:07 INF] ========================================
+[2025-10-13 22:07:07 INF] Application PDF Security démarrée
+[2025-10-13 22:07:07 INF] ========================================
+[2025-10-13 22:07:07 INF] Mode : Development
+[2025-10-13 22:07:08 INF] Dossiers créés avec succès
+[2025-10-13 22:07:08 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:07:08 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:07:08 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:07:08 INF] ========================================
+[2025-10-13 22:07:08 INF] Application prête !
+[2025-10-13 22:07:08 INF] URL : https://localhost:7001
+[2025-10-13 22:07:08 INF] Environment : Development
+[2025-10-13 22:07:08 INF] ========================================
+[2025-10-13 22:07:09 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:07:40 INF] ========================================
+[2025-10-13 22:07:40 INF] Application PDF Security démarrée
+[2025-10-13 22:07:40 INF] ========================================
+[2025-10-13 22:07:40 INF] Mode : Development
+[2025-10-13 22:07:40 INF] Dossiers créés avec succès
+[2025-10-13 22:07:40 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:07:40 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:07:40 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:07:40 INF] ========================================
+[2025-10-13 22:07:40 INF] Application prête !
+[2025-10-13 22:07:40 INF] URL : https://localhost:7001
+[2025-10-13 22:07:40 INF] Environment : Development
+[2025-10-13 22:07:40 INF] ========================================
+[2025-10-13 22:07:42 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:16:45 INF] ========================================
+[2025-10-13 22:16:45 INF] Application PDF Security démarrée
+[2025-10-13 22:16:45 INF] ========================================
+[2025-10-13 22:16:46 INF] Mode : Development
+[2025-10-13 22:16:46 INF] Dossiers créés avec succès
+[2025-10-13 22:16:46 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:16:46 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:16:46 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:16:46 INF] ========================================
+[2025-10-13 22:16:46 INF] Application prête !
+[2025-10-13 22:16:46 INF] URL : https://localhost:7001
+[2025-10-13 22:16:46 INF] Environment : Development
+[2025-10-13 22:16:46 INF] ========================================
+[2025-10-13 22:16:51 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:17:35 INF] ========================================
+[2025-10-13 22:17:35 INF] Application PDF Security démarrée
+[2025-10-13 22:17:35 INF] ========================================
+[2025-10-13 22:17:36 INF] Mode : Development
+[2025-10-13 22:17:36 INF] Dossiers créés avec succès
+[2025-10-13 22:17:36 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:17:36 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:17:36 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:17:36 INF] ========================================
+[2025-10-13 22:17:36 INF] Application prête !
+[2025-10-13 22:17:36 INF] URL : https://localhost:7001
+[2025-10-13 22:17:36 INF] Environment : Development
+[2025-10-13 22:17:36 INF] ========================================
+[2025-10-13 22:17:38 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:18:26 INF] ========================================
+[2025-10-13 22:18:26 INF] Application PDF Security démarrée
+[2025-10-13 22:18:26 INF] ========================================
+[2025-10-13 22:18:27 INF] Mode : Development
+[2025-10-13 22:18:27 INF] Dossiers créés avec succès
+[2025-10-13 22:18:27 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:18:27 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:18:27 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:18:27 INF] ========================================
+[2025-10-13 22:18:27 INF] Application prête !
+[2025-10-13 22:18:27 INF] URL : https://localhost:7001
+[2025-10-13 22:18:27 INF] Environment : Development
+[2025-10-13 22:18:27 INF] ========================================
+[2025-10-13 22:18:29 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:19:58 INF] ========================================
+[2025-10-13 22:19:58 INF] Application PDF Security démarrée
+[2025-10-13 22:19:58 INF] ========================================
+[2025-10-13 22:19:58 INF] Mode : Development
+[2025-10-13 22:19:58 INF] Dossiers créés avec succès
+[2025-10-13 22:19:58 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:19:58 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:19:58 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:19:58 INF] ========================================
+[2025-10-13 22:19:58 INF] Application prête !
+[2025-10-13 22:19:58 INF] URL : https://localhost:7001
+[2025-10-13 22:19:58 INF] Environment : Development
+[2025-10-13 22:19:58 INF] ========================================
+[2025-10-13 22:20:01 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:24:31 INF] ========================================
+[2025-10-13 22:24:31 INF] Application PDF Security démarrée
+[2025-10-13 22:24:31 INF] ========================================
+[2025-10-13 22:24:31 INF] Mode : Development
+[2025-10-13 22:24:32 INF] Dossiers créés avec succès
+[2025-10-13 22:24:32 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:24:32 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:24:32 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:24:32 INF] ========================================
+[2025-10-13 22:24:32 INF] Application prête !
+[2025-10-13 22:24:32 INF] URL : https://localhost:7001
+[2025-10-13 22:24:32 INF] Environment : Development
+[2025-10-13 22:24:32 INF] ========================================
+[2025-10-13 22:24:34 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:24:55 INF] ========================================
+[2025-10-13 22:24:55 INF] Application PDF Security démarrée
+[2025-10-13 22:24:55 INF] ========================================
+[2025-10-13 22:24:56 INF] Mode : Development
+[2025-10-13 22:24:56 INF] Dossiers créés avec succès
+[2025-10-13 22:24:56 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:24:56 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:24:56 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:24:56 INF] ========================================
+[2025-10-13 22:24:56 INF] Application prête !
+[2025-10-13 22:24:56 INF] URL : https://localhost:7001
+[2025-10-13 22:24:56 INF] Environment : Development
+[2025-10-13 22:24:56 INF] ========================================
+[2025-10-13 22:24:58 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:36:54 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:37:14 INF] ========================================
+[2025-10-13 22:37:14 INF] Application PDF Security démarrée
+[2025-10-13 22:37:14 INF] ========================================
+[2025-10-13 22:37:15 INF] Mode : Development
+[2025-10-13 22:37:15 INF] Dossiers créés avec succès
+[2025-10-13 22:37:15 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:37:15 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:37:15 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:37:15 INF] ========================================
+[2025-10-13 22:37:15 INF] Application prête !
+[2025-10-13 22:37:15 INF] URL : https://localhost:7001
+[2025-10-13 22:37:15 INF] Environment : Development
+[2025-10-13 22:37:15 INF] ========================================
+[2025-10-13 22:37:17 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:37:54 INF] ========================================
+[2025-10-13 22:37:55 INF] Application PDF Security démarrée
+[2025-10-13 22:37:55 INF] ========================================
+[2025-10-13 22:37:55 INF] Mode : Development
+[2025-10-13 22:37:55 INF] Dossiers créés avec succès
+[2025-10-13 22:37:55 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:37:55 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:37:55 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:37:55 INF] ========================================
+[2025-10-13 22:37:55 INF] Application prête !
+[2025-10-13 22:37:55 INF] URL : https://localhost:7001
+[2025-10-13 22:37:55 INF] Environment : Development
+[2025-10-13 22:37:55 INF] ========================================
+[2025-10-13 22:37:57 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:38:21 INF] 📤 Soumission formulaire - Utilisateur: Test
+[2025-10-13 22:38:21 INF] 📋 Type détecté: Fichier JSON
+[2025-10-13 22:38:21 INF] 🔄 Début traitement - Type: Fichier JSON, Taille: 4102 bytes
+[2025-10-13 22:38:21 INF] 🔄 Conversion vers PDF nécessaire...
+[2025-10-13 22:38:21 INF] 🔄 Conversion .json → PDF
+[2025-10-13 22:38:24 INF] ✅ Conversion PDF réussie: AUDIT_20251013_215301_66c585ad.pdf
+[2025-10-13 22:38:24 INF] 🔒 Lancement sécurisation maximale...
+[2025-10-13 22:38:24 INF] 🔐 [v3.0] Début du traitement PDF ULTRA-SÉCURISÉ pour Test: AUDIT_20251013_215301_66c585ad.pdf
+[2025-10-13 22:38:24 INF] 🧹 Nettoyage des métadonnées: c3cafb30-6be1-4930-ad21-43ddce0fee60_AUDIT_20251013_215301_66c585ad.pdf
+[2025-10-13 22:38:25 INF] ✨ Métadonnées nettoyées avec succès: c3cafb30-6be1-4930-ad21-43ddce0fee60_AUDIT_20251013_215301_66c585ad_cleaned.pdf
+[2025-10-13 22:38:25 INF] 🔍 Ajout du watermark invisible et empreinte
+[2025-10-13 22:38:26 INF] ✅ Watermark invisible ajouté
+[2025-10-13 22:38:26 INF] 🔢 Génération des hash par page
+[2025-10-13 22:38:27 ERR] ❌ Erreur génération hash pages
+System.InvalidOperationException: A PDF document must be opened with PdfDocumentOpenMode.Import to import pages from it.
+   at PdfSharp.Pdf.PdfPages.ImportExternalPage(PdfPage importPage)
+   at PdfSharp.Pdf.PdfPages.Insert(Int32 index, PdfPage page)
+   at PdfSharp.Pdf.PdfPages.Add(PdfPage page)
+   at PdfSharp.Pdf.PdfDocument.AddPage(PdfPage page)
+   at SecureDocumentPdf.Services.PdfSecurityService.GenerateAndSavePageHashesAsync(String pdfPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1420
+[2025-10-13 22:38:27 INF] 🌍 Ajout géolocalisation
+[2025-10-13 22:38:27 INF] ✅ Géolocalisation ajoutée
+[2025-10-13 22:38:27 INF] 🌐 Enregistrement IP: 127.0.0.1
+[2025-10-13 22:38:28 INF] ✅ IP enregistrée
+[2025-10-13 22:38:28 INF] 📄 Application filigrane dynamique
+[2025-10-13 22:38:28 ERR] ❌ Erreur filigrane dynamique
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplyDynamicPageWatermarksAsync(String inputPath, String userName, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1570
+[2025-10-13 22:38:28 INF] 📸 Ajout protection capture écran
+[2025-10-13 22:38:29 ERR] ❌ Erreur protection écran
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddScreenCaptureProtectionAsync(String inputPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1617
+[2025-10-13 22:38:29 INF] 🏷️ Application du watermark de sécurité: c3cafb30-6be1-4930-ad21-43ddce0fee60_AUDIT_20251013_215301_66c585ad_cleaned_invisible.pdf
+[2025-10-13 22:38:29 ERR] ❌ Erreur lors de l'application du watermark: C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads\c3cafb30-6be1-4930-ad21-43ddce0fee60_AUDIT_20251013_215301_66c585ad_cleaned_invisible.pdf
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplySecurityWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 230
+[2025-10-13 22:38:29 INF] 🖨️ Ajout watermark impression
+[2025-10-13 22:38:29 ERR] ❌ Erreur watermark impression
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddPrintOnlyWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1662
+[2025-10-13 22:38:29 INF] 📜 Application de la signature numérique PAdES: c3cafb30-6be1-4930-ad21-43ddce0fee60_AUDIT_20251013_215301_66c585ad_cleaned_invisible.pdf
+[2025-10-13 22:38:31 INF] 🔐 Signature numérique PAdES simulée appliquée: c3cafb30-6be1-4930-ad21-43ddce0fee60_AUDIT_20251013_215301_66c585ad_cleaned_invisible_signed.pdf
+[2025-10-13 22:38:31 INF] 📋 Certificat généré - Subject: CN=Test,O=PDF Security User,C=FR
+[2025-10-13 22:38:31 INF] 🔒 Application de la protection par chiffrement: c3cafb30-6be1-4930-ad21-43ddce0fee60_AUDIT_20251013_215301_66c585ad_cleaned_invisible_signed.pdf
+[2025-10-13 22:38:31 INF] 🔐 PDF protégé par chiffrement 128-bit. Mot de passe: PDF_***VRe
+[2025-10-13 22:38:31 INF] 🔑 Mot de passe sauvegardé de manière sécurisée: PASSWORD_c3cafb30-6be1-4930-ad21-43ddce0fee60_AUDIT_20251013_215301_66c585ad_cleaned_invisible_signed_protected.json
+[2025-10-13 22:38:32 INF] ✅ PDF protégé validé - Lecture OK, modification bloquée
+[2025-10-13 22:38:32 INF] ✅ Protection validée - PDF verrouillé avec succès
+[2025-10-13 22:38:32 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T20:38:32.247Z-NONCE:c41c872b621d42bd-MOCK
+[2025-10-13 22:38:32 INF] 📱 Génération QR Code
+[2025-10-13 22:38:32 INF] ✅ QR Code généré
+[2025-10-13 22:38:32 INF] 🖼️ Génération prévisualisations
+[2025-10-13 22:38:35 INF] 📸 Prévisualisation générée
+[2025-10-13 22:38:35 INF] 📋 Génération journal d'audit
+[2025-10-13 22:38:35 INF] ✅ Journal d'audit généré
+[2025-10-13 22:38:35 INF] 📋 Génération certificat de preuve enrichi
+[2025-10-13 22:38:35 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T20:38:35.192Z-NONCE:99fb98d9211148a7-MOCK
+[2025-10-13 22:38:35 INF] ✅ Certificat de preuve enrichi généré
+[2025-10-13 22:38:35 INF] 🎉 Traitement PDF ULTRA-SÉCURISÉ terminé avec succès pour Test en 10.65s
+[2025-10-13 22:38:35 INF] ✅ Traitement réussi - PDF sécurisé: /secured/SECURED_20251013_223835_AUDIT_20251013_215301_66c585ad.pdf, Durée: 10.6476961s
+[2025-10-13 22:39:50 INF] ========================================
+[2025-10-13 22:39:50 INF] Application PDF Security démarrée
+[2025-10-13 22:39:50 INF] ========================================
+[2025-10-13 22:39:51 INF] Mode : Development
+[2025-10-13 22:39:51 INF] Dossiers créés avec succès
+[2025-10-13 22:39:51 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:39:51 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:39:51 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:39:51 INF] ========================================
+[2025-10-13 22:39:51 INF] Application prête !
+[2025-10-13 22:39:51 INF] URL : https://localhost:7001
+[2025-10-13 22:39:51 INF] Environment : Development
+[2025-10-13 22:39:51 INF] ========================================
+[2025-10-13 22:39:54 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:40:59 INF] 📤 Soumission formulaire - Utilisateur: Mon Test
+[2025-10-13 22:40:59 INF] 📋 Type détecté: Image
+[2025-10-13 22:40:59 INF] 🔄 Début traitement - Type: Image, Taille: 173296 bytes
+[2025-10-13 22:40:59 INF] 🔄 Conversion vers PDF nécessaire...
+[2025-10-13 22:40:59 INF] 🔄 Conversion .jpg → PDF
+[2025-10-13 22:41:01 INF] ✅ Conversion PDF réussie: fiche article rempli.pdf
+[2025-10-13 22:41:01 INF] 🔒 Lancement sécurisation maximale...
+[2025-10-13 22:41:01 INF] 🔐 [v3.0] Début du traitement PDF ULTRA-SÉCURISÉ pour Mon Test: fiche article rempli.pdf
+[2025-10-13 22:41:01 INF] 🧹 Nettoyage des métadonnées: 4298d1bf-7f76-4a56-835e-a403554598a7_fiche article rempli.pdf
+[2025-10-13 22:41:02 INF] ✨ Métadonnées nettoyées avec succès: 4298d1bf-7f76-4a56-835e-a403554598a7_fiche article rempli_cleaned.pdf
+[2025-10-13 22:41:02 INF] 🔍 Ajout du watermark invisible et empreinte
+[2025-10-13 22:41:02 INF] ✅ Watermark invisible ajouté
+[2025-10-13 22:41:02 INF] 🔢 Génération des hash par page
+[2025-10-13 22:41:02 ERR] ❌ Erreur génération hash pages
+System.InvalidOperationException: A PDF document must be opened with PdfDocumentOpenMode.Import to import pages from it.
+   at PdfSharp.Pdf.PdfPages.ImportExternalPage(PdfPage importPage)
+   at PdfSharp.Pdf.PdfPages.Insert(Int32 index, PdfPage page)
+   at PdfSharp.Pdf.PdfPages.Add(PdfPage page)
+   at PdfSharp.Pdf.PdfDocument.AddPage(PdfPage page)
+   at SecureDocumentPdf.Services.PdfSecurityService.GenerateAndSavePageHashesAsync(String pdfPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1420
+[2025-10-13 22:41:02 INF] 🌍 Ajout géolocalisation
+[2025-10-13 22:41:02 INF] ✅ Géolocalisation ajoutée
+[2025-10-13 22:41:02 INF] ⏰ Configuration expiration: 3 jours
+[2025-10-13 22:41:02 INF] ✅ Expiration configurée
+[2025-10-13 22:41:02 INF] 🌐 Enregistrement IP: 127.0.0.1
+[2025-10-13 22:41:02 INF] ✅ IP enregistrée
+[2025-10-13 22:41:02 INF] 📄 Application filigrane dynamique
+[2025-10-13 22:41:03 ERR] ❌ Erreur filigrane dynamique
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplyDynamicPageWatermarksAsync(String inputPath, String userName, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1570
+[2025-10-13 22:41:03 INF] 📸 Ajout protection capture écran
+[2025-10-13 22:41:03 ERR] ❌ Erreur protection écran
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddScreenCaptureProtectionAsync(String inputPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1617
+[2025-10-13 22:41:03 INF] 🏷️ Application du watermark de sécurité: 4298d1bf-7f76-4a56-835e-a403554598a7_fiche article rempli_cleaned_invisible.pdf
+[2025-10-13 22:41:03 ERR] ❌ Erreur lors de l'application du watermark: C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads\4298d1bf-7f76-4a56-835e-a403554598a7_fiche article rempli_cleaned_invisible.pdf
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplySecurityWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 230
+[2025-10-13 22:41:03 INF] 🖨️ Ajout watermark impression
+[2025-10-13 22:41:03 ERR] ❌ Erreur watermark impression
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddPrintOnlyWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1662
+[2025-10-13 22:41:03 INF] 📜 Application de la signature numérique PAdES: 4298d1bf-7f76-4a56-835e-a403554598a7_fiche article rempli_cleaned_invisible.pdf
+[2025-10-13 22:41:06 INF] 🔐 Signature numérique PAdES simulée appliquée: 4298d1bf-7f76-4a56-835e-a403554598a7_fiche article rempli_cleaned_invisible_signed.pdf
+[2025-10-13 22:41:06 INF] 📋 Certificat généré - Subject: CN=Mon Test,O=PDF Security User,C=FR
+[2025-10-13 22:41:06 INF] 🔒 Application de la protection par chiffrement: 4298d1bf-7f76-4a56-835e-a403554598a7_fiche article rempli_cleaned_invisible_signed.pdf
+[2025-10-13 22:41:06 INF] 🔐 PDF protégé par chiffrement 128-bit. Mot de passe: PDF_***SGE
+[2025-10-13 22:41:06 INF] 🔑 Mot de passe sauvegardé de manière sécurisée: PASSWORD_4298d1bf-7f76-4a56-835e-a403554598a7_fiche article rempli_cleaned_invisible_signed_protected.json
+[2025-10-13 22:41:06 INF] ✅ PDF protégé validé - Lecture OK, modification bloquée
+[2025-10-13 22:41:06 INF] ✅ Protection validée - PDF verrouillé avec succès
+[2025-10-13 22:41:06 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T20:41:06.371Z-NONCE:8e889117571146fa-MOCK
+[2025-10-13 22:41:06 INF] 📱 Génération QR Code
+[2025-10-13 22:41:06 INF] ✅ QR Code généré
+[2025-10-13 22:41:06 INF] 🖼️ Génération prévisualisations
+[2025-10-13 22:41:08 INF] 📸 Prévisualisation générée
+[2025-10-13 22:41:08 INF] ✍️ Ajout 1 emplacements signature
+[2025-10-13 22:41:09 ERR] ❌ Erreur multi-signature
+PdfSharp.Pdf.IO.PdfReaderException: To modify the document the owner password is required
+   at PdfSharp.Pdf.IO.PdfReader.OpenFromStream(Stream stream, String password, PdfDocumentOpenMode openMode, PdfPasswordProvider passwordProvider, PdfReaderOptions options)
+   at PdfSharp.Pdf.IO.PdfReader.OpenFromFile(String path, String password, PdfDocumentOpenMode openMode, PdfPasswordProvider passwordProvider)
+   at PdfSharp.Pdf.IO.PdfReader.Open(String path, String password, PdfDocumentOpenMode openMode, PdfPasswordProvider passwordProvider, PdfReaderOptions options)
+   at PdfSharp.Pdf.IO.PdfReader.Open(String path, PdfDocumentOpenMode openMode, PdfReaderOptions options)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddMultiSignatureSlotsAsync(String pdfPath, List`1 signers) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1726
+[2025-10-13 22:41:09 INF] 📋 Génération journal d'audit
+[2025-10-13 22:41:09 INF] ✅ Journal d'audit généré
+[2025-10-13 22:41:09 INF] 📋 Génération certificat de preuve enrichi
+[2025-10-13 22:41:09 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T20:41:09.055Z-NONCE:d1a7c14b504d4e77-MOCK
+[2025-10-13 22:41:09 INF] ✅ Certificat de preuve enrichi généré
+[2025-10-13 22:41:09 INF] 🎉 Traitement PDF ULTRA-SÉCURISÉ terminé avec succès pour Mon Test en 7.32s
+[2025-10-13 22:41:09 INF] ✅ Traitement réussi - PDF sécurisé: /secured/SECURED_20251013_224109_fiche article rempli.pdf, Durée: 7.3180165s
+[2025-10-13 22:43:34 INF] ========================================
+[2025-10-13 22:43:34 INF] Application PDF Security démarrée
+[2025-10-13 22:43:34 INF] ========================================
+[2025-10-13 22:43:34 INF] Mode : Development
+[2025-10-13 22:43:35 INF] Dossiers créés avec succès
+[2025-10-13 22:43:35 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:43:35 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:43:35 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:43:35 INF] ========================================
+[2025-10-13 22:43:35 INF] Application prête !
+[2025-10-13 22:43:35 INF] URL : https://localhost:7001
+[2025-10-13 22:43:35 INF] Environment : Development
+[2025-10-13 22:43:35 INF] ========================================
+[2025-10-13 22:43:37 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:47:27 INF] ========================================
+[2025-10-13 22:47:27 INF] Application PDF Security démarrée
+[2025-10-13 22:47:27 INF] ========================================
+[2025-10-13 22:47:27 INF] Mode : Development
+[2025-10-13 22:47:27 INF] Dossiers créés avec succès
+[2025-10-13 22:47:27 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:47:27 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:47:27 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:47:27 INF] ========================================
+[2025-10-13 22:47:27 INF] Application prête !
+[2025-10-13 22:47:27 INF] URL : https://localhost:7001
+[2025-10-13 22:47:27 INF] Environment : Development
+[2025-10-13 22:47:27 INF] ========================================
+[2025-10-13 22:47:30 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:47:48 INF] 📤 Soumission formulaire - Utilisateur: Test
+[2025-10-13 22:47:48 INF] 📋 Type détecté: Image
+[2025-10-13 22:47:48 INF] 🔄 Début traitement - Type: Image, Taille: 148772 bytes
+[2025-10-13 22:47:48 INF] 🔄 Conversion vers PDF nécessaire...
+[2025-10-13 22:47:48 INF] 🔄 Conversion .jpg → PDF
+[2025-10-13 22:47:49 INF] ✅ Conversion PDF réussie: fiche article.pdf
+[2025-10-13 22:47:49 INF] 🔒 Lancement sécurisation maximale...
+[2025-10-13 22:47:49 INF] 🔐 [v3.0] Début du traitement PDF ULTRA-SÉCURISÉ pour Test: fiche article.pdf
+[2025-10-13 22:47:49 INF] 🧹 Nettoyage des métadonnées: 17f8b6e1-cbdf-441c-a715-5d63cd3a992f_fiche article.pdf
+[2025-10-13 22:47:49 INF] ✨ Métadonnées nettoyées avec succès: 17f8b6e1-cbdf-441c-a715-5d63cd3a992f_fiche article_cleaned.pdf
+[2025-10-13 22:47:49 INF] 🔍 Ajout du watermark invisible et empreinte
+[2025-10-13 22:47:49 INF] ✅ Watermark invisible ajouté
+[2025-10-13 22:47:49 INF] 🔢 Génération des hash par page
+[2025-10-13 22:47:49 ERR] ❌ Erreur génération hash pages
+System.InvalidOperationException: A PDF document must be opened with PdfDocumentOpenMode.Import to import pages from it.
+   at PdfSharp.Pdf.PdfPages.ImportExternalPage(PdfPage importPage)
+   at PdfSharp.Pdf.PdfPages.Insert(Int32 index, PdfPage page)
+   at PdfSharp.Pdf.PdfPages.Add(PdfPage page)
+   at PdfSharp.Pdf.PdfDocument.AddPage(PdfPage page)
+   at SecureDocumentPdf.Services.PdfSecurityService.GenerateAndSavePageHashesAsync(String pdfPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1420
+[2025-10-13 22:47:49 INF] 🌍 Ajout géolocalisation
+[2025-10-13 22:47:49 INF] ✅ Géolocalisation ajoutée
+[2025-10-13 22:47:49 INF] 🌐 Enregistrement IP: 127.0.0.1
+[2025-10-13 22:47:49 INF] ✅ IP enregistrée
+[2025-10-13 22:47:49 INF] 📄 Application filigrane dynamique
+[2025-10-13 22:47:50 ERR] ❌ Erreur filigrane dynamique
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplyDynamicPageWatermarksAsync(String inputPath, String userName, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1570
+[2025-10-13 22:47:50 INF] 📸 Ajout protection capture écran
+[2025-10-13 22:47:50 ERR] ❌ Erreur protection écran
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddScreenCaptureProtectionAsync(String inputPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1617
+[2025-10-13 22:47:50 INF] 🏷️ Application du watermark de sécurité: 17f8b6e1-cbdf-441c-a715-5d63cd3a992f_fiche article_cleaned_invisible.pdf
+[2025-10-13 22:47:50 ERR] ❌ Erreur lors de l'application du watermark: C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads\17f8b6e1-cbdf-441c-a715-5d63cd3a992f_fiche article_cleaned_invisible.pdf
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplySecurityWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 230
+[2025-10-13 22:47:50 INF] 🖨️ Ajout watermark impression
+[2025-10-13 22:47:50 ERR] ❌ Erreur watermark impression
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddPrintOnlyWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1662
+[2025-10-13 22:47:50 INF] 📜 Application de la signature numérique PAdES: 17f8b6e1-cbdf-441c-a715-5d63cd3a992f_fiche article_cleaned_invisible.pdf
+[2025-10-13 22:47:51 INF] 🔐 Signature numérique PAdES simulée appliquée: 17f8b6e1-cbdf-441c-a715-5d63cd3a992f_fiche article_cleaned_invisible_signed.pdf
+[2025-10-13 22:47:51 INF] 📋 Certificat généré - Subject: CN=Test,O=PDF Security User,C=FR
+[2025-10-13 22:47:52 INF] 🔒 Application de la protection par chiffrement: 17f8b6e1-cbdf-441c-a715-5d63cd3a992f_fiche article_cleaned_invisible_signed.pdf
+[2025-10-13 22:47:52 INF] 🔐 PDF protégé par chiffrement 128-bit. Mot de passe: PDF_***FSx
+[2025-10-13 22:47:52 INF] 🔑 Mot de passe sauvegardé de manière sécurisée: PASSWORD_17f8b6e1-cbdf-441c-a715-5d63cd3a992f_fiche article_cleaned_invisible_signed_protected.json
+[2025-10-13 22:47:52 INF] ✅ PDF protégé validé - Lecture OK, modification bloquée
+[2025-10-13 22:47:52 INF] ✅ Protection validée - PDF verrouillé avec succès
+[2025-10-13 22:47:52 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T20:47:52.199Z-NONCE:a0b12eb7c4e64ef2-MOCK
+[2025-10-13 22:47:52 INF] 📱 Génération QR Code
+[2025-10-13 22:47:52 INF] ✅ QR Code généré
+[2025-10-13 22:47:52 INF] 🖼️ Génération prévisualisations
+[2025-10-13 22:47:54 INF] 📸 Prévisualisation générée
+[2025-10-13 22:47:54 INF] 📋 Génération journal d'audit
+[2025-10-13 22:47:54 INF] ✅ Journal d'audit généré
+[2025-10-13 22:47:54 INF] 📋 Génération certificat de preuve enrichi
+[2025-10-13 22:47:54 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T20:47:54.555Z-NONCE:8f02f2e894e4447e-MOCK
+[2025-10-13 22:47:54 INF] ✅ Certificat de preuve enrichi généré
+[2025-10-13 22:47:54 INF] 🎉 Traitement PDF ULTRA-SÉCURISÉ terminé avec succès pour Test en 5.43s
+[2025-10-13 22:47:54 INF] ✅ Traitement réussi - PDF sécurisé: /secured/SECURED_20251013_224754_fiche article.pdf, Durée: 5.4343833s
+[2025-10-13 22:48:13 INF] 📤 Soumission formulaire - Utilisateur: Test
+[2025-10-13 22:48:13 WRN] ⚠️ Aucun fichier uploadé
+[2025-10-13 22:48:51 INF] ========================================
+[2025-10-13 22:48:52 INF] Application PDF Security démarrée
+[2025-10-13 22:48:52 INF] ========================================
+[2025-10-13 22:48:52 INF] Mode : Development
+[2025-10-13 22:48:52 INF] Dossiers créés avec succès
+[2025-10-13 22:48:52 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:48:52 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:48:52 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:48:52 INF] ========================================
+[2025-10-13 22:48:52 INF] Application prête !
+[2025-10-13 22:48:52 INF] URL : https://localhost:7001
+[2025-10-13 22:48:52 INF] Environment : Development
+[2025-10-13 22:48:52 INF] ========================================
+[2025-10-13 22:48:54 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:49:26 INF] ========================================
+[2025-10-13 22:49:27 INF] Application PDF Security démarrée
+[2025-10-13 22:49:27 INF] ========================================
+[2025-10-13 22:49:27 INF] Mode : Development
+[2025-10-13 22:49:27 INF] Dossiers créés avec succès
+[2025-10-13 22:49:27 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:49:27 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:49:27 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:49:27 INF] ========================================
+[2025-10-13 22:49:27 INF] Application prête !
+[2025-10-13 22:49:27 INF] URL : https://localhost:7001
+[2025-10-13 22:49:27 INF] Environment : Development
+[2025-10-13 22:49:27 INF] ========================================
+[2025-10-13 22:49:30 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:50:33 INF] ========================================
+[2025-10-13 22:50:33 INF] Application PDF Security démarrée
+[2025-10-13 22:50:33 INF] ========================================
+[2025-10-13 22:50:34 INF] Mode : Development
+[2025-10-13 22:50:34 INF] Dossiers créés avec succès
+[2025-10-13 22:50:34 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:50:34 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:50:34 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:50:34 INF] ========================================
+[2025-10-13 22:50:34 INF] Application prête !
+[2025-10-13 22:50:34 INF] URL : https://localhost:7001
+[2025-10-13 22:50:34 INF] Environment : Development
+[2025-10-13 22:50:34 INF] ========================================
+[2025-10-13 22:50:36 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:52:03 INF] ========================================
+[2025-10-13 22:52:03 INF] Application PDF Security démarrée
+[2025-10-13 22:52:03 INF] ========================================
+[2025-10-13 22:52:03 INF] Mode : Development
+[2025-10-13 22:52:03 INF] Dossiers créés avec succès
+[2025-10-13 22:52:03 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:52:03 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:52:03 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:52:03 INF] ========================================
+[2025-10-13 22:52:03 INF] Application prête !
+[2025-10-13 22:52:03 INF] URL : https://localhost:7001
+[2025-10-13 22:52:03 INF] Environment : Development
+[2025-10-13 22:52:03 INF] ========================================
+[2025-10-13 22:52:05 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:53:26 INF] ========================================
+[2025-10-13 22:53:26 INF] Application PDF Security démarrée
+[2025-10-13 22:53:26 INF] ========================================
+[2025-10-13 22:53:26 INF] Mode : Development
+[2025-10-13 22:53:27 INF] Dossiers créés avec succès
+[2025-10-13 22:53:27 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:53:27 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:53:27 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:53:27 INF] ========================================
+[2025-10-13 22:53:27 INF] Application prête !
+[2025-10-13 22:53:27 INF] URL : https://localhost:7001
+[2025-10-13 22:53:27 INF] Environment : Development
+[2025-10-13 22:53:27 INF] ========================================
+[2025-10-13 22:53:31 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:54:03 INF] ========================================
+[2025-10-13 22:54:03 INF] Application PDF Security démarrée
+[2025-10-13 22:54:03 INF] ========================================
+[2025-10-13 22:54:03 INF] Mode : Development
+[2025-10-13 22:54:03 INF] Dossiers créés avec succès
+[2025-10-13 22:54:03 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:54:03 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:54:03 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:54:03 INF] ========================================
+[2025-10-13 22:54:03 INF] Application prête !
+[2025-10-13 22:54:03 INF] URL : https://localhost:7001
+[2025-10-13 22:54:03 INF] Environment : Development
+[2025-10-13 22:54:03 INF] ========================================
+[2025-10-13 22:54:05 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:55:48 INF] ========================================
+[2025-10-13 22:55:48 INF] Application PDF Security démarrée
+[2025-10-13 22:55:48 INF] ========================================
+[2025-10-13 22:55:48 INF] Mode : Development
+[2025-10-13 22:55:49 INF] Dossiers créés avec succès
+[2025-10-13 22:55:49 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:55:49 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:55:49 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:55:49 INF] ========================================
+[2025-10-13 22:55:49 INF] Application prête !
+[2025-10-13 22:55:49 INF] URL : https://localhost:7001
+[2025-10-13 22:55:49 INF] Environment : Development
+[2025-10-13 22:55:49 INF] ========================================
+[2025-10-13 22:55:51 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 22:56:49 INF] ========================================
+[2025-10-13 22:56:49 INF] Application PDF Security démarrée
+[2025-10-13 22:56:49 INF] ========================================
+[2025-10-13 22:56:50 INF] Mode : Development
+[2025-10-13 22:56:50 INF] Dossiers créés avec succès
+[2025-10-13 22:56:50 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 22:56:50 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 22:56:50 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 22:56:50 INF] ========================================
+[2025-10-13 22:56:50 INF] Application prête !
+[2025-10-13 22:56:50 INF] URL : https://localhost:7001
+[2025-10-13 22:56:50 INF] Environment : Development
+[2025-10-13 22:56:50 INF] ========================================
+[2025-10-13 22:56:52 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:00:54 INF] 📤 Soumission formulaire - Utilisateur: Test
+[2025-10-13 23:00:54 INF] 📋 Type détecté: Image
+[2025-10-13 23:00:54 INF] 🔄 Début traitement - Type: Image, Taille: 148772 bytes
+[2025-10-13 23:00:54 INF] 🔄 Conversion vers PDF nécessaire...
+[2025-10-13 23:00:54 INF] 🔄 Conversion .jpg → PDF
+[2025-10-13 23:00:54 INF] ✅ Conversion PDF réussie: fiche article.pdf
+[2025-10-13 23:00:54 INF] 🔒 Lancement sécurisation maximale...
+[2025-10-13 23:00:54 INF] 🔐 [v3.0] Début du traitement PDF ULTRA-SÉCURISÉ pour Test: fiche article.pdf
+[2025-10-13 23:00:54 INF] 🧹 Nettoyage des métadonnées: f4afa48e-6985-4e3f-955c-9dd05af2ef27_fiche article.pdf
+[2025-10-13 23:00:55 INF] ✨ Métadonnées nettoyées avec succès: f4afa48e-6985-4e3f-955c-9dd05af2ef27_fiche article_cleaned.pdf
+[2025-10-13 23:00:55 INF] 🔍 Ajout du watermark invisible et empreinte
+[2025-10-13 23:00:55 INF] ✅ Watermark invisible ajouté
+[2025-10-13 23:00:55 INF] 🔢 Génération des hash par page
+[2025-10-13 23:00:55 ERR] ❌ Erreur génération hash pages
+System.InvalidOperationException: A PDF document must be opened with PdfDocumentOpenMode.Import to import pages from it.
+   at PdfSharp.Pdf.PdfPages.ImportExternalPage(PdfPage importPage)
+   at PdfSharp.Pdf.PdfPages.Insert(Int32 index, PdfPage page)
+   at PdfSharp.Pdf.PdfPages.Add(PdfPage page)
+   at PdfSharp.Pdf.PdfDocument.AddPage(PdfPage page)
+   at SecureDocumentPdf.Services.PdfSecurityService.GenerateAndSavePageHashesAsync(String pdfPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1420
+[2025-10-13 23:00:55 INF] 🌍 Ajout géolocalisation
+[2025-10-13 23:00:55 INF] ✅ Géolocalisation ajoutée
+[2025-10-13 23:00:55 INF] 🌐 Enregistrement IP: 127.0.0.1
+[2025-10-13 23:00:55 INF] ✅ IP enregistrée
+[2025-10-13 23:00:55 INF] 📄 Application filigrane dynamique
+[2025-10-13 23:00:55 ERR] ❌ Erreur filigrane dynamique
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplyDynamicPageWatermarksAsync(String inputPath, String userName, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1570
+[2025-10-13 23:00:55 INF] 📸 Ajout protection capture écran
+[2025-10-13 23:00:56 ERR] ❌ Erreur protection écran
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddScreenCaptureProtectionAsync(String inputPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1617
+[2025-10-13 23:00:56 INF] 🏷️ Application du watermark de sécurité: f4afa48e-6985-4e3f-955c-9dd05af2ef27_fiche article_cleaned_invisible.pdf
+[2025-10-13 23:00:56 ERR] ❌ Erreur lors de l'application du watermark: C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads\f4afa48e-6985-4e3f-955c-9dd05af2ef27_fiche article_cleaned_invisible.pdf
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplySecurityWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 230
+[2025-10-13 23:00:56 INF] 🖨️ Ajout watermark impression
+[2025-10-13 23:00:56 ERR] ❌ Erreur watermark impression
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddPrintOnlyWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1662
+[2025-10-13 23:00:56 INF] 📜 Application de la signature numérique PAdES: f4afa48e-6985-4e3f-955c-9dd05af2ef27_fiche article_cleaned_invisible.pdf
+[2025-10-13 23:00:58 INF] 🔐 Signature numérique PAdES simulée appliquée: f4afa48e-6985-4e3f-955c-9dd05af2ef27_fiche article_cleaned_invisible_signed.pdf
+[2025-10-13 23:00:58 INF] 📋 Certificat généré - Subject: CN=Test,O=PDF Security User,C=FR
+[2025-10-13 23:00:58 INF] 🔒 Application de la protection par chiffrement: f4afa48e-6985-4e3f-955c-9dd05af2ef27_fiche article_cleaned_invisible_signed.pdf
+[2025-10-13 23:00:58 INF] 🔐 PDF protégé par chiffrement 128-bit. Mot de passe: PDF_***oge
+[2025-10-13 23:00:58 INF] 🔑 Mot de passe sauvegardé de manière sécurisée: PASSWORD_f4afa48e-6985-4e3f-955c-9dd05af2ef27_fiche article_cleaned_invisible_signed_protected.json
+[2025-10-13 23:00:58 INF] ✅ PDF protégé validé - Lecture OK, modification bloquée
+[2025-10-13 23:00:58 INF] ✅ Protection validée - PDF verrouillé avec succès
+[2025-10-13 23:00:58 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T21:00:58.289Z-NONCE:e6aab9d89b214623-MOCK
+[2025-10-13 23:00:58 INF] 📱 Génération QR Code
+[2025-10-13 23:00:59 INF] ✅ QR Code généré
+[2025-10-13 23:00:59 INF] 🖼️ Génération prévisualisations
+[2025-10-13 23:01:03 INF] 📸 Prévisualisation générée
+[2025-10-13 23:01:03 INF] 📋 Génération journal d'audit
+[2025-10-13 23:01:03 INF] ✅ Journal d'audit généré
+[2025-10-13 23:01:03 INF] 📋 Génération certificat de preuve enrichi
+[2025-10-13 23:01:03 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T21:01:03.246Z-NONCE:8271f48f7db24a24-MOCK
+[2025-10-13 23:01:03 INF] ✅ Certificat de preuve enrichi généré
+[2025-10-13 23:01:03 INF] 🎉 Traitement PDF ULTRA-SÉCURISÉ terminé avec succès pour Test en 8.38s
+[2025-10-13 23:01:03 INF] ✅ Traitement réussi - PDF sécurisé: /secured/SECURED_20251013_230103_fiche article.pdf, Durée: 8.3809012s
+[2025-10-13 23:01:03 WRN] Unable to configure Browser Link script injection on the response. 
+[2025-10-13 23:01:03 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[2025-10-13 23:02:02 INF] 📤 Soumission formulaire - Utilisateur: Test
+[2025-10-13 23:02:02 WRN] ⚠️ Aucun fichier uploadé
+[2025-10-13 23:02:15 INF] 📤 Soumission formulaire - Utilisateur: Test
+[2025-10-13 23:02:15 INF] 📋 Type détecté: Document Word
+[2025-10-13 23:02:15 INF] 🔄 Début traitement - Type: Document Word, Taille: 36981 bytes
+[2025-10-13 23:02:15 INF] 🔄 Conversion vers PDF nécessaire...
+[2025-10-13 23:02:15 INF] 🔄 Conversion .docx → PDF
+[2025-10-13 23:02:17 INF] ✅ Conversion PDF réussie: Menu_Salades_Plats(1).pdf
+[2025-10-13 23:02:17 INF] 🔒 Lancement sécurisation maximale...
+[2025-10-13 23:02:17 INF] 🔐 [v3.0] Début du traitement PDF ULTRA-SÉCURISÉ pour Test: Menu_Salades_Plats(1).pdf
+[2025-10-13 23:02:17 INF] 🧹 Nettoyage des métadonnées: cae3c64b-e059-49ed-ac88-85ba3f9083a9_Menu_Salades_Plats(1).pdf
+[2025-10-13 23:02:17 INF] ✨ Métadonnées nettoyées avec succès: cae3c64b-e059-49ed-ac88-85ba3f9083a9_Menu_Salades_Plats(1)_cleaned.pdf
+[2025-10-13 23:02:17 INF] 🔍 Ajout du watermark invisible et empreinte
+[2025-10-13 23:02:17 INF] ✅ Watermark invisible ajouté
+[2025-10-13 23:02:17 INF] 🔢 Génération des hash par page
+[2025-10-13 23:02:17 ERR] ❌ Erreur génération hash pages
+System.InvalidOperationException: A PDF document must be opened with PdfDocumentOpenMode.Import to import pages from it.
+   at PdfSharp.Pdf.PdfPages.ImportExternalPage(PdfPage importPage)
+   at PdfSharp.Pdf.PdfPages.Insert(Int32 index, PdfPage page)
+   at PdfSharp.Pdf.PdfPages.Add(PdfPage page)
+   at PdfSharp.Pdf.PdfDocument.AddPage(PdfPage page)
+   at SecureDocumentPdf.Services.PdfSecurityService.GenerateAndSavePageHashesAsync(String pdfPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1420
+[2025-10-13 23:02:17 INF] 🌍 Ajout géolocalisation
+[2025-10-13 23:02:17 INF] ✅ Géolocalisation ajoutée
+[2025-10-13 23:02:17 INF] 🌐 Enregistrement IP: 127.0.0.1
+[2025-10-13 23:02:17 INF] ✅ IP enregistrée
+[2025-10-13 23:02:17 INF] 📄 Application filigrane dynamique
+[2025-10-13 23:02:18 ERR] ❌ Erreur filigrane dynamique
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplyDynamicPageWatermarksAsync(String inputPath, String userName, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1570
+[2025-10-13 23:02:18 INF] 📸 Ajout protection capture écran
+[2025-10-13 23:02:18 ERR] ❌ Erreur protection écran
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddScreenCaptureProtectionAsync(String inputPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1617
+[2025-10-13 23:02:18 INF] 🏷️ Application du watermark de sécurité: cae3c64b-e059-49ed-ac88-85ba3f9083a9_Menu_Salades_Plats(1)_cleaned_invisible.pdf
+[2025-10-13 23:02:18 ERR] ❌ Erreur lors de l'application du watermark: C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads\cae3c64b-e059-49ed-ac88-85ba3f9083a9_Menu_Salades_Plats(1)_cleaned_invisible.pdf
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplySecurityWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 230
+[2025-10-13 23:02:18 INF] 🖨️ Ajout watermark impression
+[2025-10-13 23:02:18 ERR] ❌ Erreur watermark impression
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddPrintOnlyWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1662
+[2025-10-13 23:02:18 INF] 📜 Application de la signature numérique PAdES: cae3c64b-e059-49ed-ac88-85ba3f9083a9_Menu_Salades_Plats(1)_cleaned_invisible.pdf
+[2025-10-13 23:02:18 INF] 🔐 Signature numérique PAdES simulée appliquée: cae3c64b-e059-49ed-ac88-85ba3f9083a9_Menu_Salades_Plats(1)_cleaned_invisible_signed.pdf
+[2025-10-13 23:02:18 INF] 📋 Certificat généré - Subject: CN=Test,O=PDF Security User,C=FR
+[2025-10-13 23:02:19 INF] 🔒 Application de la protection par chiffrement: cae3c64b-e059-49ed-ac88-85ba3f9083a9_Menu_Salades_Plats(1)_cleaned_invisible_signed.pdf
+[2025-10-13 23:02:19 INF] 🔐 PDF protégé par chiffrement 128-bit. Mot de passe: PDF_***LKh
+[2025-10-13 23:02:19 INF] 🔑 Mot de passe sauvegardé de manière sécurisée: PASSWORD_cae3c64b-e059-49ed-ac88-85ba3f9083a9_Menu_Salades_Plats(1)_cleaned_invisible_signed_protected.json
+[2025-10-13 23:02:19 INF] ✅ PDF protégé validé - Lecture OK, modification bloquée
+[2025-10-13 23:02:19 INF] ✅ Protection validée - PDF verrouillé avec succès
+[2025-10-13 23:02:19 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T21:02:19.087Z-NONCE:9e2d948a6abb45aa-MOCK
+[2025-10-13 23:02:19 INF] 📱 Génération QR Code
+[2025-10-13 23:02:19 INF] ✅ QR Code généré
+[2025-10-13 23:02:19 INF] 🖼️ Génération prévisualisations
+[2025-10-13 23:02:19 INF] 📸 Prévisualisation générée
+[2025-10-13 23:02:19 INF] 📋 Génération journal d'audit
+[2025-10-13 23:02:19 INF] ✅ Journal d'audit généré
+[2025-10-13 23:02:19 INF] 📋 Génération certificat de preuve enrichi
+[2025-10-13 23:02:19 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T21:02:19.286Z-NONCE:61762417bbd740d1-MOCK
+[2025-10-13 23:02:19 INF] ✅ Certificat de preuve enrichi généré
+[2025-10-13 23:02:19 INF] 🎉 Traitement PDF ULTRA-SÉCURISÉ terminé avec succès pour Test en 1.50s
+[2025-10-13 23:02:19 INF] ✅ Traitement réussi - PDF sécurisé: /secured/SECURED_20251013_230219_Menu_Salades_Plats(1).pdf, Durée: 1.5046734s
+[2025-10-13 23:02:38 INF] 📤 Soumission formulaire - Utilisateur: Test
+[2025-10-13 23:02:38 INF] 📋 Type détecté: Tableur Excel
+[2025-10-13 23:02:38 INF] 🔄 Début traitement - Type: Tableur Excel, Taille: 9784 bytes
+[2025-10-13 23:02:38 INF] 🔄 Conversion vers PDF nécessaire...
+[2025-10-13 23:02:38 INF] 🔄 Conversion .xlsx → PDF
+[2025-10-13 23:02:40 INF] ✅ Conversion PDF réussie: Suivi_Plan_SEO_La_Grande_Bleue.pdf
+[2025-10-13 23:02:40 INF] 🔒 Lancement sécurisation maximale...
+[2025-10-13 23:02:40 INF] 🔐 [v3.0] Début du traitement PDF ULTRA-SÉCURISÉ pour Test: Suivi_Plan_SEO_La_Grande_Bleue.pdf
+[2025-10-13 23:02:40 INF] 🧹 Nettoyage des métadonnées: 0c6d6b5d-e2f8-4ca8-865d-0efd0e18a888_Suivi_Plan_SEO_La_Grande_Bleue.pdf
+[2025-10-13 23:02:40 INF] ✨ Métadonnées nettoyées avec succès: 0c6d6b5d-e2f8-4ca8-865d-0efd0e18a888_Suivi_Plan_SEO_La_Grande_Bleue_cleaned.pdf
+[2025-10-13 23:02:40 INF] 🔍 Ajout du watermark invisible et empreinte
+[2025-10-13 23:02:40 INF] ✅ Watermark invisible ajouté
+[2025-10-13 23:02:40 INF] 🔢 Génération des hash par page
+[2025-10-13 23:02:40 ERR] ❌ Erreur génération hash pages
+System.InvalidOperationException: A PDF document must be opened with PdfDocumentOpenMode.Import to import pages from it.
+   at PdfSharp.Pdf.PdfPages.ImportExternalPage(PdfPage importPage)
+   at PdfSharp.Pdf.PdfPages.Insert(Int32 index, PdfPage page)
+   at PdfSharp.Pdf.PdfPages.Add(PdfPage page)
+   at PdfSharp.Pdf.PdfDocument.AddPage(PdfPage page)
+   at SecureDocumentPdf.Services.PdfSecurityService.GenerateAndSavePageHashesAsync(String pdfPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1420
+[2025-10-13 23:02:40 INF] 🌍 Ajout géolocalisation
+[2025-10-13 23:02:41 INF] ✅ Géolocalisation ajoutée
+[2025-10-13 23:02:41 INF] 🌐 Enregistrement IP: 127.0.0.1
+[2025-10-13 23:02:41 INF] ✅ IP enregistrée
+[2025-10-13 23:02:41 INF] 📄 Application filigrane dynamique
+[2025-10-13 23:02:41 ERR] ❌ Erreur filigrane dynamique
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplyDynamicPageWatermarksAsync(String inputPath, String userName, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1570
+[2025-10-13 23:02:41 INF] 📸 Ajout protection capture écran
+[2025-10-13 23:02:41 ERR] ❌ Erreur protection écran
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddScreenCaptureProtectionAsync(String inputPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1617
+[2025-10-13 23:02:41 INF] 🏷️ Application du watermark de sécurité: 0c6d6b5d-e2f8-4ca8-865d-0efd0e18a888_Suivi_Plan_SEO_La_Grande_Bleue_cleaned_invisible.pdf
+[2025-10-13 23:02:41 ERR] ❌ Erreur lors de l'application du watermark: C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads\0c6d6b5d-e2f8-4ca8-865d-0efd0e18a888_Suivi_Plan_SEO_La_Grande_Bleue_cleaned_invisible.pdf
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplySecurityWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 230
+[2025-10-13 23:02:41 INF] 🖨️ Ajout watermark impression
+[2025-10-13 23:02:41 ERR] ❌ Erreur watermark impression
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddPrintOnlyWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1662
+[2025-10-13 23:02:41 INF] 📜 Application de la signature numérique PAdES: 0c6d6b5d-e2f8-4ca8-865d-0efd0e18a888_Suivi_Plan_SEO_La_Grande_Bleue_cleaned_invisible.pdf
+[2025-10-13 23:02:42 INF] 🔐 Signature numérique PAdES simulée appliquée: 0c6d6b5d-e2f8-4ca8-865d-0efd0e18a888_Suivi_Plan_SEO_La_Grande_Bleue_cleaned_invisible_signed.pdf
+[2025-10-13 23:02:42 INF] 📋 Certificat généré - Subject: CN=Test,O=PDF Security User,C=FR
+[2025-10-13 23:02:42 INF] 🔒 Application de la protection par chiffrement: 0c6d6b5d-e2f8-4ca8-865d-0efd0e18a888_Suivi_Plan_SEO_La_Grande_Bleue_cleaned_invisible_signed.pdf
+[2025-10-13 23:02:42 INF] 🔐 PDF protégé par chiffrement 128-bit. Mot de passe: PDF_***NSQ
+[2025-10-13 23:02:42 INF] 🔑 Mot de passe sauvegardé de manière sécurisée: PASSWORD_0c6d6b5d-e2f8-4ca8-865d-0efd0e18a888_Suivi_Plan_SEO_La_Grande_Bleue_cleaned_invisible_signed_protected.json
+[2025-10-13 23:02:42 INF] ✅ PDF protégé validé - Lecture OK, modification bloquée
+[2025-10-13 23:02:42 INF] ✅ Protection validée - PDF verrouillé avec succès
+[2025-10-13 23:02:42 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T21:02:42.412Z-NONCE:e18d4c82f6744761-MOCK
+[2025-10-13 23:02:42 INF] 📱 Génération QR Code
+[2025-10-13 23:02:42 INF] ✅ QR Code généré
+[2025-10-13 23:02:42 INF] 🖼️ Génération prévisualisations
+[2025-10-13 23:02:42 INF] 📸 Prévisualisation générée
+[2025-10-13 23:02:42 INF] 📋 Génération journal d'audit
+[2025-10-13 23:02:42 INF] ✅ Journal d'audit généré
+[2025-10-13 23:02:42 INF] 📋 Génération certificat de preuve enrichi
+[2025-10-13 23:02:42 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T21:02:42.592Z-NONCE:7b75914c7f6045d9-MOCK
+[2025-10-13 23:02:42 INF] ✅ Certificat de preuve enrichi généré
+[2025-10-13 23:02:42 INF] 🎉 Traitement PDF ULTRA-SÉCURISÉ terminé avec succès pour Test en 1.75s
+[2025-10-13 23:02:42 INF] ✅ Traitement réussi - PDF sécurisé: /secured/SECURED_20251013_230242_Suivi_Plan_SEO_La_Grande_Bleue.pdf, Durée: 1.7549831s
+[2025-10-13 23:08:04 INF] ========================================
+[2025-10-13 23:08:04 INF] Application PDF Security démarrée
+[2025-10-13 23:08:04 INF] ========================================
+[2025-10-13 23:08:05 INF] Mode : Development
+[2025-10-13 23:08:05 INF] Dossiers créés avec succès
+[2025-10-13 23:08:05 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:08:05 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:08:05 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:08:05 INF] ========================================
+[2025-10-13 23:08:05 INF] Application prête !
+[2025-10-13 23:08:05 INF] URL : https://localhost:7001
+[2025-10-13 23:08:05 INF] Environment : Development
+[2025-10-13 23:08:05 INF] ========================================
+[2025-10-13 23:08:07 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:08:26 INF] 📤 Soumission formulaire - Utilisateur: Test
+[2025-10-13 23:08:26 INF] 📋 Type détecté: Document PDF
+[2025-10-13 23:08:26 INF] 🔄 Début traitement - Type: Document PDF, Taille: 637635 bytes
+[2025-10-13 23:08:26 INF] 🔒 Lancement sécurisation maximale...
+[2025-10-13 23:08:26 INF] 🔐 [v3.0] Début du traitement PDF ULTRA-SÉCURISÉ pour Test: Menu(1).pdf
+[2025-10-13 23:08:26 INF] 🧹 Nettoyage des métadonnées: da729d0f-3754-4d16-ad33-0bfd93a59461_Menu(1).pdf
+[2025-10-13 23:08:26 INF] ✨ Métadonnées nettoyées avec succès: da729d0f-3754-4d16-ad33-0bfd93a59461_Menu(1)_cleaned.pdf
+[2025-10-13 23:08:26 INF] 🔍 Ajout du watermark invisible et empreinte
+[2025-10-13 23:08:26 INF] ✅ Watermark invisible ajouté
+[2025-10-13 23:08:26 INF] 🔢 Génération des hash par page
+[2025-10-13 23:08:27 ERR] ❌ Erreur génération hash pages
+System.InvalidOperationException: A PDF document must be opened with PdfDocumentOpenMode.Import to import pages from it.
+   at PdfSharp.Pdf.PdfPages.ImportExternalPage(PdfPage importPage)
+   at PdfSharp.Pdf.PdfPages.Insert(Int32 index, PdfPage page)
+   at PdfSharp.Pdf.PdfPages.Add(PdfPage page)
+   at PdfSharp.Pdf.PdfDocument.AddPage(PdfPage page)
+   at SecureDocumentPdf.Services.PdfSecurityService.GenerateAndSavePageHashesAsync(String pdfPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1420
+[2025-10-13 23:08:27 INF] 🌍 Ajout géolocalisation
+[2025-10-13 23:08:27 INF] ✅ Géolocalisation ajoutée
+[2025-10-13 23:08:27 INF] ⏰ Configuration expiration: 2 jours
+[2025-10-13 23:08:27 INF] ✅ Expiration configurée
+[2025-10-13 23:08:27 INF] 🌐 Enregistrement IP: 127.0.0.1
+[2025-10-13 23:08:27 INF] ✅ IP enregistrée
+[2025-10-13 23:08:27 INF] 📄 Application filigrane dynamique
+[2025-10-13 23:08:27 ERR] ❌ Erreur filigrane dynamique
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplyDynamicPageWatermarksAsync(String inputPath, String userName, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1570
+[2025-10-13 23:08:27 INF] 📸 Ajout protection capture écran
+[2025-10-13 23:08:27 ERR] ❌ Erreur protection écran
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddScreenCaptureProtectionAsync(String inputPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1617
+[2025-10-13 23:08:27 INF] 🏷️ Application du watermark de sécurité: da729d0f-3754-4d16-ad33-0bfd93a59461_Menu(1)_cleaned_invisible.pdf
+[2025-10-13 23:08:27 ERR] ❌ Erreur lors de l'application du watermark: C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads\da729d0f-3754-4d16-ad33-0bfd93a59461_Menu(1)_cleaned_invisible.pdf
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplySecurityWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 230
+[2025-10-13 23:08:27 INF] 🖨️ Ajout watermark impression
+[2025-10-13 23:08:27 ERR] ❌ Erreur watermark impression
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddPrintOnlyWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1662
+[2025-10-13 23:08:27 INF] 📜 Application de la signature numérique PAdES: da729d0f-3754-4d16-ad33-0bfd93a59461_Menu(1)_cleaned_invisible.pdf
+[2025-10-13 23:08:29 INF] 🔐 Signature numérique PAdES simulée appliquée: da729d0f-3754-4d16-ad33-0bfd93a59461_Menu(1)_cleaned_invisible_signed.pdf
+[2025-10-13 23:08:29 INF] 📋 Certificat généré - Subject: CN=Test,O=PDF Security User,C=FR
+[2025-10-13 23:08:29 INF] 🔒 Application de la protection par chiffrement: da729d0f-3754-4d16-ad33-0bfd93a59461_Menu(1)_cleaned_invisible_signed.pdf
+[2025-10-13 23:08:29 INF] 🔐 PDF protégé par chiffrement 128-bit. Mot de passe: PDF_***uF0
+[2025-10-13 23:08:29 INF] 🔑 Mot de passe sauvegardé de manière sécurisée: PASSWORD_da729d0f-3754-4d16-ad33-0bfd93a59461_Menu(1)_cleaned_invisible_signed_protected.json
+[2025-10-13 23:08:29 INF] ✅ PDF protégé validé - Lecture OK, modification bloquée
+[2025-10-13 23:08:29 INF] ✅ Protection validée - PDF verrouillé avec succès
+[2025-10-13 23:08:29 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T21:08:29.790Z-NONCE:db609591997f4060-MOCK
+[2025-10-13 23:08:29 INF] 📱 Génération QR Code
+[2025-10-13 23:08:29 INF] ✅ QR Code généré
+[2025-10-13 23:08:29 INF] 🖼️ Génération prévisualisations
+[2025-10-13 23:08:31 INF] 📸 Prévisualisation générée
+[2025-10-13 23:08:31 INF] 📋 Génération journal d'audit
+[2025-10-13 23:08:31 INF] ✅ Journal d'audit généré
+[2025-10-13 23:08:31 INF] 📋 Génération certificat de preuve enrichi
+[2025-10-13 23:08:31 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T21:08:31.600Z-NONCE:983aee545c9d4a03-MOCK
+[2025-10-13 23:08:31 INF] ✅ Certificat de preuve enrichi généré
+[2025-10-13 23:08:31 INF] 🎉 Traitement PDF ULTRA-SÉCURISÉ terminé avec succès pour Test en 4.91s
+[2025-10-13 23:08:31 INF] ✅ Traitement réussi - PDF sécurisé: /secured/SECURED_20251013_230831_Menu(1).pdf, Durée: 4.9086063s
+[2025-10-13 23:09:24 INF] ========================================
+[2025-10-13 23:09:24 INF] Application PDF Security démarrée
+[2025-10-13 23:09:24 INF] ========================================
+[2025-10-13 23:09:24 INF] Mode : Development
+[2025-10-13 23:09:24 INF] Dossiers créés avec succès
+[2025-10-13 23:09:24 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:09:24 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:09:24 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:09:24 INF] ========================================
+[2025-10-13 23:09:24 INF] Application prête !
+[2025-10-13 23:09:24 INF] URL : https://localhost:7001
+[2025-10-13 23:09:24 INF] Environment : Development
+[2025-10-13 23:09:24 INF] ========================================
+[2025-10-13 23:09:26 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:09:40 INF] 📤 Soumission formulaire - Utilisateur: Test
+[2025-10-13 23:09:40 INF] 📋 Type détecté: Document Word
+[2025-10-13 23:09:40 INF] 🔄 Début traitement - Type: Document Word, Taille: 37146 bytes
+[2025-10-13 23:09:40 INF] 🔄 Conversion vers PDF nécessaire...
+[2025-10-13 23:09:40 INF] 🔄 Conversion .docx → PDF
+[2025-10-13 23:09:41 INF] ✅ Conversion PDF réussie: Menu_Grillades.pdf
+[2025-10-13 23:09:41 INF] 🔒 Lancement sécurisation maximale...
+[2025-10-13 23:09:41 INF] 🔐 [v3.0] Début du traitement PDF ULTRA-SÉCURISÉ pour Test: Menu_Grillades.pdf
+[2025-10-13 23:09:41 INF] 🧹 Nettoyage des métadonnées: 2ee90807-8fa4-40c4-8eaf-1ce650e6cabd_Menu_Grillades.pdf
+[2025-10-13 23:09:42 INF] ✨ Métadonnées nettoyées avec succès: 2ee90807-8fa4-40c4-8eaf-1ce650e6cabd_Menu_Grillades_cleaned.pdf
+[2025-10-13 23:09:42 INF] 🔍 Ajout du watermark invisible et empreinte
+[2025-10-13 23:09:42 INF] ✅ Watermark invisible ajouté
+[2025-10-13 23:09:42 INF] 🔢 Génération des hash par page
+[2025-10-13 23:09:42 ERR] ❌ Erreur génération hash pages
+System.InvalidOperationException: A PDF document must be opened with PdfDocumentOpenMode.Import to import pages from it.
+   at PdfSharp.Pdf.PdfPages.ImportExternalPage(PdfPage importPage)
+   at PdfSharp.Pdf.PdfPages.Insert(Int32 index, PdfPage page)
+   at PdfSharp.Pdf.PdfPages.Add(PdfPage page)
+   at PdfSharp.Pdf.PdfDocument.AddPage(PdfPage page)
+   at SecureDocumentPdf.Services.PdfSecurityService.GenerateAndSavePageHashesAsync(String pdfPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1420
+[2025-10-13 23:09:42 INF] 🌍 Ajout géolocalisation
+[2025-10-13 23:09:42 INF] ✅ Géolocalisation ajoutée
+[2025-10-13 23:09:42 INF] 🌐 Enregistrement IP: 127.0.0.1
+[2025-10-13 23:09:42 INF] ✅ IP enregistrée
+[2025-10-13 23:09:42 INF] 📄 Application filigrane dynamique
+[2025-10-13 23:09:42 ERR] ❌ Erreur filigrane dynamique
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplyDynamicPageWatermarksAsync(String inputPath, String userName, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1570
+[2025-10-13 23:09:42 INF] 📸 Ajout protection capture écran
+[2025-10-13 23:09:42 ERR] ❌ Erreur protection écran
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddScreenCaptureProtectionAsync(String inputPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1617
+[2025-10-13 23:09:42 INF] 🏷️ Application du watermark de sécurité: 2ee90807-8fa4-40c4-8eaf-1ce650e6cabd_Menu_Grillades_cleaned_invisible.pdf
+[2025-10-13 23:09:42 ERR] ❌ Erreur lors de l'application du watermark: C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads\2ee90807-8fa4-40c4-8eaf-1ce650e6cabd_Menu_Grillades_cleaned_invisible.pdf
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplySecurityWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 230
+[2025-10-13 23:09:42 INF] 🖨️ Ajout watermark impression
+[2025-10-13 23:09:42 ERR] ❌ Erreur watermark impression
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddPrintOnlyWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1662
+[2025-10-13 23:09:42 INF] 📜 Application de la signature numérique PAdES: 2ee90807-8fa4-40c4-8eaf-1ce650e6cabd_Menu_Grillades_cleaned_invisible.pdf
+[2025-10-13 23:09:43 INF] 🔐 Signature numérique PAdES simulée appliquée: 2ee90807-8fa4-40c4-8eaf-1ce650e6cabd_Menu_Grillades_cleaned_invisible_signed.pdf
+[2025-10-13 23:09:43 INF] 📋 Certificat généré - Subject: CN=Test,O=PDF Security User,C=FR
+[2025-10-13 23:09:43 INF] 🔒 Application de la protection par chiffrement: 2ee90807-8fa4-40c4-8eaf-1ce650e6cabd_Menu_Grillades_cleaned_invisible_signed.pdf
+[2025-10-13 23:09:43 INF] 🔐 PDF protégé par chiffrement 128-bit. Mot de passe: PDF_***0na
+[2025-10-13 23:09:43 INF] 🔑 Mot de passe sauvegardé de manière sécurisée: PASSWORD_2ee90807-8fa4-40c4-8eaf-1ce650e6cabd_Menu_Grillades_cleaned_invisible_signed_protected.json
+[2025-10-13 23:09:43 INF] ✅ PDF protégé validé - Lecture OK, modification bloquée
+[2025-10-13 23:09:43 INF] ✅ Protection validée - PDF verrouillé avec succès
+[2025-10-13 23:09:43 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T21:09:43.950Z-NONCE:07a5ae65b1d64831-MOCK
+[2025-10-13 23:09:43 INF] 📱 Génération QR Code
+[2025-10-13 23:09:44 INF] ✅ QR Code généré
+[2025-10-13 23:09:44 INF] 🖼️ Génération prévisualisations
+[2025-10-13 23:09:45 INF] 📸 Prévisualisation générée
+[2025-10-13 23:09:45 INF] 📋 Génération journal d'audit
+[2025-10-13 23:09:45 INF] ✅ Journal d'audit généré
+[2025-10-13 23:09:45 INF] 📋 Génération certificat de preuve enrichi
+[2025-10-13 23:09:45 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T21:09:45.776Z-NONCE:2f6bd2d26c844e73-MOCK
+[2025-10-13 23:09:45 INF] ✅ Certificat de preuve enrichi généré
+[2025-10-13 23:09:45 INF] 🎉 Traitement PDF ULTRA-SÉCURISÉ terminé avec succès pour Test en 4.16s
+[2025-10-13 23:09:45 INF] ✅ Traitement réussi - PDF sécurisé: /secured/SECURED_20251013_230945_Menu_Grillades.pdf, Durée: 4.1638717s
+[2025-10-13 23:10:48 INF] 📤 Soumission formulaire - Utilisateur: Test
+[2025-10-13 23:10:48 INF] 📋 Type détecté: Image
+[2025-10-13 23:10:48 INF] 🔄 Début traitement - Type: Image, Taille: 19946 bytes
+[2025-10-13 23:10:48 INF] 🔄 Conversion vers PDF nécessaire...
+[2025-10-13 23:10:48 INF] 🔄 Conversion .png → PDF
+[2025-10-13 23:10:48 INF] ✅ Conversion PDF réussie: logo_ministere.pdf
+[2025-10-13 23:10:48 INF] 🔒 Lancement sécurisation maximale...
+[2025-10-13 23:10:48 INF] 🔐 [v3.0] Début du traitement PDF ULTRA-SÉCURISÉ pour Test: logo_ministere.pdf
+[2025-10-13 23:10:48 INF] 🧹 Nettoyage des métadonnées: 31037aba-8afa-4a0f-a4b9-e79dc081c735_logo_ministere.pdf
+[2025-10-13 23:10:48 INF] ✨ Métadonnées nettoyées avec succès: 31037aba-8afa-4a0f-a4b9-e79dc081c735_logo_ministere_cleaned.pdf
+[2025-10-13 23:10:48 INF] 🔍 Ajout du watermark invisible et empreinte
+[2025-10-13 23:10:48 INF] ✅ Watermark invisible ajouté
+[2025-10-13 23:10:48 INF] 🔢 Génération des hash par page
+[2025-10-13 23:10:48 ERR] ❌ Erreur génération hash pages
+System.InvalidOperationException: A PDF document must be opened with PdfDocumentOpenMode.Import to import pages from it.
+   at PdfSharp.Pdf.PdfPages.ImportExternalPage(PdfPage importPage)
+   at PdfSharp.Pdf.PdfPages.Insert(Int32 index, PdfPage page)
+   at PdfSharp.Pdf.PdfPages.Add(PdfPage page)
+   at PdfSharp.Pdf.PdfDocument.AddPage(PdfPage page)
+   at SecureDocumentPdf.Services.PdfSecurityService.GenerateAndSavePageHashesAsync(String pdfPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1420
+[2025-10-13 23:10:48 INF] 🌍 Ajout géolocalisation
+[2025-10-13 23:10:48 INF] ✅ Géolocalisation ajoutée
+[2025-10-13 23:10:48 INF] 🌐 Enregistrement IP: 127.0.0.1
+[2025-10-13 23:10:48 INF] ✅ IP enregistrée
+[2025-10-13 23:10:48 INF] 📄 Application filigrane dynamique
+[2025-10-13 23:10:48 ERR] ❌ Erreur filigrane dynamique
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplyDynamicPageWatermarksAsync(String inputPath, String userName, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1570
+[2025-10-13 23:10:48 INF] 📸 Ajout protection capture écran
+[2025-10-13 23:10:48 ERR] ❌ Erreur protection écran
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddScreenCaptureProtectionAsync(String inputPath, String documentId) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1617
+[2025-10-13 23:10:48 INF] 🏷️ Application du watermark de sécurité: 31037aba-8afa-4a0f-a4b9-e79dc081c735_logo_ministere_cleaned_invisible.pdf
+[2025-10-13 23:10:48 ERR] ❌ Erreur lors de l'application du watermark: C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads\31037aba-8afa-4a0f-a4b9-e79dc081c735_logo_ministere_cleaned_invisible.pdf
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.ApplySecurityWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 230
+[2025-10-13 23:10:48 INF] 🖨️ Ajout watermark impression
+[2025-10-13 23:10:48 ERR] ❌ Erreur watermark impression
+System.InvalidOperationException: No appropriate font found for family name 'Arial'. Implement IFontResolver and assign to 'GlobalFontSettings.FontResolver' to use fonts. See https://docs.pdfsharp.net/link/font-resolving.html
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at SecureDocumentPdf.Services.PdfSecurityService.AddPrintOnlyWatermarkAsync(String inputPath, String userName) in C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\Services\PdfSecurityService.cs:line 1662
+[2025-10-13 23:10:48 INF] 📜 Application de la signature numérique PAdES: 31037aba-8afa-4a0f-a4b9-e79dc081c735_logo_ministere_cleaned_invisible.pdf
+[2025-10-13 23:10:49 INF] 🔐 Signature numérique PAdES simulée appliquée: 31037aba-8afa-4a0f-a4b9-e79dc081c735_logo_ministere_cleaned_invisible_signed.pdf
+[2025-10-13 23:10:49 INF] 📋 Certificat généré - Subject: CN=Test,O=PDF Security User,C=FR
+[2025-10-13 23:10:49 INF] 🔒 Application de la protection par chiffrement: 31037aba-8afa-4a0f-a4b9-e79dc081c735_logo_ministere_cleaned_invisible_signed.pdf
+[2025-10-13 23:10:49 INF] 🔐 PDF protégé par chiffrement 128-bit. Mot de passe: PDF_***h3x
+[2025-10-13 23:10:49 INF] 🔑 Mot de passe sauvegardé de manière sécurisée: PASSWORD_31037aba-8afa-4a0f-a4b9-e79dc081c735_logo_ministere_cleaned_invisible_signed_protected.json
+[2025-10-13 23:10:49 INF] ✅ PDF protégé validé - Lecture OK, modification bloquée
+[2025-10-13 23:10:49 INF] ✅ Protection validée - PDF verrouillé avec succès
+[2025-10-13 23:10:49 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T21:10:49.954Z-NONCE:adbe1771350e4180-MOCK
+[2025-10-13 23:10:49 INF] 📱 Génération QR Code
+[2025-10-13 23:10:49 INF] ✅ QR Code généré
+[2025-10-13 23:10:49 INF] 🖼️ Génération prévisualisations
+[2025-10-13 23:10:50 INF] 📸 Prévisualisation générée
+[2025-10-13 23:10:50 INF] 📋 Génération journal d'audit
+[2025-10-13 23:10:50 INF] ✅ Journal d'audit généré
+[2025-10-13 23:10:50 INF] 📋 Génération certificat de preuve enrichi
+[2025-10-13 23:10:50 INF] ⏰ Horodatage RFC3161 généré: RFC3161-2025-10-13T21:10:50.118Z-NONCE:b514eb6e2e294a55-MOCK
+[2025-10-13 23:10:50 INF] ✅ Certificat de preuve enrichi généré
+[2025-10-13 23:10:50 INF] 🎉 Traitement PDF ULTRA-SÉCURISÉ terminé avec succès pour Test en 1.80s
+[2025-10-13 23:10:50 INF] ✅ Traitement réussi - PDF sécurisé: /secured/SECURED_20251013_231050_logo_ministere.pdf, Durée: 1.8001051s
+[2025-10-13 23:16:39 INF] ========================================
+[2025-10-13 23:16:39 INF] Application PDF Security démarrée
+[2025-10-13 23:16:39 INF] ========================================
+[2025-10-13 23:16:39 INF] Mode : Development
+[2025-10-13 23:16:40 INF] Dossiers créés avec succès
+[2025-10-13 23:16:40 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:16:40 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:16:40 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:16:40 INF] ========================================
+[2025-10-13 23:16:40 INF] Application prête !
+[2025-10-13 23:16:40 INF] URL : https://localhost:7001
+[2025-10-13 23:16:40 INF] Environment : Development
+[2025-10-13 23:16:40 INF] ========================================
+[2025-10-13 23:16:43 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:17:29 INF] ========================================
+[2025-10-13 23:17:29 INF] Application PDF Security démarrée
+[2025-10-13 23:17:29 INF] ========================================
+[2025-10-13 23:17:29 INF] Mode : Development
+[2025-10-13 23:17:29 INF] Dossiers créés avec succès
+[2025-10-13 23:17:29 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:17:29 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:17:29 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:17:29 INF] ========================================
+[2025-10-13 23:17:29 INF] Application prête !
+[2025-10-13 23:17:29 INF] URL : https://localhost:7001
+[2025-10-13 23:17:29 INF] Environment : Development
+[2025-10-13 23:17:29 INF] ========================================
+[2025-10-13 23:17:31 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:17:59 INF] ========================================
+[2025-10-13 23:17:59 INF] Application PDF Security démarrée
+[2025-10-13 23:17:59 INF] ========================================
+[2025-10-13 23:17:59 INF] Mode : Development
+[2025-10-13 23:17:59 INF] Dossiers créés avec succès
+[2025-10-13 23:17:59 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:17:59 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:17:59 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:17:59 INF] ========================================
+[2025-10-13 23:17:59 INF] Application prête !
+[2025-10-13 23:17:59 INF] URL : https://localhost:7001
+[2025-10-13 23:17:59 INF] Environment : Development
+[2025-10-13 23:17:59 INF] ========================================
+[2025-10-13 23:18:02 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:19:10 INF] ========================================
+[2025-10-13 23:19:10 INF] Application PDF Security démarrée
+[2025-10-13 23:19:10 INF] ========================================
+[2025-10-13 23:19:10 INF] Mode : Development
+[2025-10-13 23:19:10 INF] Dossiers créés avec succès
+[2025-10-13 23:19:10 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:19:10 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:19:10 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:19:10 INF] ========================================
+[2025-10-13 23:19:10 INF] Application prête !
+[2025-10-13 23:19:10 INF] URL : https://localhost:7001
+[2025-10-13 23:19:10 INF] Environment : Development
+[2025-10-13 23:19:10 INF] ========================================
+[2025-10-13 23:19:12 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:19:38 INF] ========================================
+[2025-10-13 23:19:38 INF] Application PDF Security démarrée
+[2025-10-13 23:19:38 INF] ========================================
+[2025-10-13 23:19:39 INF] Mode : Development
+[2025-10-13 23:19:39 INF] Dossiers créés avec succès
+[2025-10-13 23:19:39 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:19:39 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:19:39 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:19:39 INF] ========================================
+[2025-10-13 23:19:39 INF] Application prête !
+[2025-10-13 23:19:39 INF] URL : https://localhost:7001
+[2025-10-13 23:19:39 INF] Environment : Development
+[2025-10-13 23:19:39 INF] ========================================
+[2025-10-13 23:19:40 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:20:54 INF] ========================================
+[2025-10-13 23:20:54 INF] Application PDF Security démarrée
+[2025-10-13 23:20:54 INF] ========================================
+[2025-10-13 23:20:54 INF] Mode : Development
+[2025-10-13 23:20:54 INF] Dossiers créés avec succès
+[2025-10-13 23:20:54 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:20:54 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:20:54 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:20:54 INF] ========================================
+[2025-10-13 23:20:54 INF] Application prête !
+[2025-10-13 23:20:54 INF] URL : https://localhost:7001
+[2025-10-13 23:20:54 INF] Environment : Development
+[2025-10-13 23:20:54 INF] ========================================
+[2025-10-13 23:20:56 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:22:14 INF] ========================================
+[2025-10-13 23:22:14 INF] Application PDF Security démarrée
+[2025-10-13 23:22:14 INF] ========================================
+[2025-10-13 23:22:15 INF] Mode : Development
+[2025-10-13 23:22:15 INF] Dossiers créés avec succès
+[2025-10-13 23:22:15 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:22:15 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:22:15 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:22:15 INF] ========================================
+[2025-10-13 23:22:15 INF] Application prête !
+[2025-10-13 23:22:15 INF] URL : https://localhost:7001
+[2025-10-13 23:22:15 INF] Environment : Development
+[2025-10-13 23:22:15 INF] ========================================
+[2025-10-13 23:22:17 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:24:13 INF] ========================================
+[2025-10-13 23:24:13 INF] Application PDF Security démarrée
+[2025-10-13 23:24:13 INF] ========================================
+[2025-10-13 23:24:13 INF] Mode : Development
+[2025-10-13 23:24:15 INF] Dossiers créés avec succès
+[2025-10-13 23:24:15 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:24:15 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:24:15 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:24:15 INF] ========================================
+[2025-10-13 23:24:15 INF] Application prête !
+[2025-10-13 23:24:15 INF] URL : https://localhost:7001
+[2025-10-13 23:24:15 INF] Environment : Development
+[2025-10-13 23:24:15 INF] ========================================
+[2025-10-13 23:24:17 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:27:47 INF] ========================================
+[2025-10-13 23:27:47 INF] Application PDF Security démarrée
+[2025-10-13 23:27:47 INF] ========================================
+[2025-10-13 23:27:47 INF] Mode : Development
+[2025-10-13 23:27:48 INF] Dossiers créés avec succès
+[2025-10-13 23:27:48 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:27:48 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:27:48 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:27:48 INF] ========================================
+[2025-10-13 23:27:48 INF] Application prête !
+[2025-10-13 23:27:48 INF] URL : https://localhost:7001
+[2025-10-13 23:27:48 INF] Environment : Development
+[2025-10-13 23:27:48 INF] ========================================
+[2025-10-13 23:27:50 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:28:26 INF] ========================================
+[2025-10-13 23:28:26 INF] Application PDF Security démarrée
+[2025-10-13 23:28:26 INF] ========================================
+[2025-10-13 23:28:26 INF] Mode : Development
+[2025-10-13 23:28:27 INF] Dossiers créés avec succès
+[2025-10-13 23:28:27 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:28:27 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:28:27 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:28:27 INF] ========================================
+[2025-10-13 23:28:27 INF] Application prête !
+[2025-10-13 23:28:27 INF] URL : https://localhost:7001
+[2025-10-13 23:28:27 INF] Environment : Development
+[2025-10-13 23:28:27 INF] ========================================
+[2025-10-13 23:28:28 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:30:44 INF] ========================================
+[2025-10-13 23:30:44 INF] Application PDF Security démarrée
+[2025-10-13 23:30:44 INF] ========================================
+[2025-10-13 23:30:44 INF] Mode : Development
+[2025-10-13 23:30:44 INF] Dossiers créés avec succès
+[2025-10-13 23:30:44 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:30:44 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:30:44 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:30:44 INF] ========================================
+[2025-10-13 23:30:44 INF] Application prête !
+[2025-10-13 23:30:44 INF] URL : https://localhost:7001
+[2025-10-13 23:30:44 INF] Environment : Development
+[2025-10-13 23:30:44 INF] ========================================
+[2025-10-13 23:30:47 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:33:28 INF] ========================================
+[2025-10-13 23:33:28 INF] Application PDF Security démarrée
+[2025-10-13 23:33:28 INF] ========================================
+[2025-10-13 23:33:29 INF] Mode : Development
+[2025-10-13 23:33:29 INF] Dossiers créés avec succès
+[2025-10-13 23:33:29 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:33:29 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:33:29 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:33:29 INF] ========================================
+[2025-10-13 23:33:29 INF] Application prête !
+[2025-10-13 23:33:29 INF] URL : https://localhost:7001
+[2025-10-13 23:33:29 INF] Environment : Development
+[2025-10-13 23:33:29 INF] ========================================
+[2025-10-13 23:33:31 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:36:25 INF] ========================================
+[2025-10-13 23:36:25 INF] Application PDF Security démarrée
+[2025-10-13 23:36:25 INF] ========================================
+[2025-10-13 23:36:26 INF] Mode : Development
+[2025-10-13 23:36:26 INF] Dossiers créés avec succès
+[2025-10-13 23:36:26 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:36:26 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:36:26 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:36:26 INF] ========================================
+[2025-10-13 23:36:26 INF] Application prête !
+[2025-10-13 23:36:26 INF] URL : https://localhost:7001
+[2025-10-13 23:36:26 INF] Environment : Development
+[2025-10-13 23:36:26 INF] ========================================
+[2025-10-13 23:36:29 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:38:18 INF] ========================================
+[2025-10-13 23:38:18 INF] Application PDF Security démarrée
+[2025-10-13 23:38:18 INF] ========================================
+[2025-10-13 23:38:19 INF] Mode : Development
+[2025-10-13 23:38:19 INF] Dossiers créés avec succès
+[2025-10-13 23:38:19 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-13 23:38:19 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-13 23:38:19 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-13 23:38:19 INF] ========================================
+[2025-10-13 23:38:19 INF] Application prête !
+[2025-10-13 23:38:19 INF] URL : https://localhost:7001
+[2025-10-13 23:38:19 INF] Environment : Development
+[2025-10-13 23:38:19 INF] ========================================
+[2025-10-13 23:38:21 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:43:42 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-13 23:45:30 INF] 📄 Page Index chargée - Support multi-formats activé

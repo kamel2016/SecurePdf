@@ -1,0 +1,115 @@
+﻿{
+  "Version": "3.0 - Ultra Secured",
+  "GeneratedAt": "2025-10-13T20:41:09.0545308Z",
+  "Document": {
+    "Id": "94e5e1c2-30ea-4ca8-929b-cb795018f809",
+    "FileName": "SECURED_20251013_224109_fiche article rempli.pdf",
+    "OriginalName": "fiche article rempli.pdf",
+    "ProcessedBy": "Mon Test",
+    "ProcessedAt": "2025-10-13T20:41:09.05454Z",
+    "FileSize": 117884,
+    "TotalPages": 0
+  },
+  "CryptographicIntegrity": {
+    "OriginalSHA256": "9eac656a244e4c3cabcd3cdac8f63bb0e739b785b9dc90a530efdb85c78eaef6",
+    "ProcessedSHA256": "b07cc94d4b78c9b9c4d4026bb64e11c38731fac8f5b4696ec7c452c034b6c6aa",
+    "BiometricSignature": "BIO-SIG-kgrLfGV53NLOkHrRodjYM0Hhg09//ZiL",
+    "Algorithm": "SHA-256 + SHA-512",
+    "Verified": true,
+    "PageHashes": {},
+    "BlockchainHashChain": [
+      "BLOCK-0: B07CC94D4B78C9B9C4D4026BB64E11C38731FAC8F5B4696EC7C452C034B6C6AA",
+      "BLOCK-1: 8E9E2039650BAF471BBD6E6A86ED9ED6D3ECC5C48AE252A301704480CB320D18",
+      "BLOCK-2: 954BEBB0AFA76003C29870E74BAAC5E63B0D4669D7C9D87B197BA366E9FAF428",
+      "BLOCK-3: EB3FE0CF204EE30BDAB66E0E470500E5822CA928C0389CFD724F23338D570664",
+      "BLOCK-4: C90EAD75FFF13371BF4C1BBA55DBB91BA4032D6BBD77026B35F33B9D549962E0"
+    ]
+  },
+  "SecurityMeasures": [
+    "1. ✅ Nettoyage complet des métadonnées sensibles",
+    "2. ✅ Watermark invisible avec empreinte numérique",
+    "3. ✅ Hash individuel par page (détection modification)",
+    "4. ✅ Géolocalisation et métadonnées contextuelles",
+    "5. ✅ Date d'expiration programmable",
+    "6. ✅ Restriction IP d'origine enregistrée",
+    "7. ✅ Filigrane dynamique unique par page",
+    "8. ✅ Protection contre capture d'écran",
+    "9. ✅ Watermark de sécurité principal multi-couches",
+    "10. ✅ Watermark visible uniquement à l'impression",
+    "11. ✅ Signature numérique PAdES avec certificat X.509",
+    "12. ✅ Signature biométrique unique du document",
+    "13. ✅ Chiffrement AES 128-bit avec protection mot de passe",
+    "14. ✅ Chaîne de hash blockchain immuable",
+    "15. ✅ Horodatage certifié RFC3161",
+    "16. ✅ QR Code de vérification d'authenticité",
+    "17. ✅ Prévisualisations sécurisées",
+    "18. ✅ Support multi-signature collaborative",
+    "19. ✅ Journal d'audit complet et traçable",
+    "20. ✅ Validation d'intégrité cryptographique"
+  ],
+  "PasswordProtection": {
+    "Enabled": true,
+    "EncryptionAlgorithm": "AES",
+    "EncryptionLevel": "128-bit",
+    "OwnerPasswordRequired": true,
+    "UserPasswordRequired": false,
+    "DocumentSecurityLevel": "MAXIMUM",
+    "Permissions": {
+      "OpenDocument": "✅ Autorisé sans mot de passe",
+      "ViewDocument": "✅ Autorisé",
+      "PrintLowQuality": "✅ Autorisé",
+      "PrintHighQuality": "❌ Interdit",
+      "ModifyDocument": "❌ Interdit (mot de passe propriétaire requis)",
+      "CopyContent": "❌ Interdit",
+      "ExtractContent": "❌ Interdit",
+      "ModifyAnnotations": "❌ Interdit",
+      "FillForms": "❌ Interdit",
+      "ExtractForAccessibility": "❌ Interdit",
+      "AssembleDocument": "❌ Interdit"
+    }
+  },
+  "TraceabilityInfo": {
+    "OriginIP": "127.0.0.1",
+    "DocumentId": "94e5e1c2-30ea-4ca8-929b-cb795018f809",
+    "BiometricSignature": "BIO-SIG-kgrLfGV53NLOkHrRodjYM0Hhg09//ZiL",
+    "BlockchainChainLength": 5,
+    "IndividualPageHashes": 0,
+    "VerificationQRCodeGenerated": true
+  },
+  "Timestamp": "RFC3161-2025-10-13T20:41:09.055Z-NONCE:d1a7c14b504d4e77-MOCK",
+  "Application": {
+    "Name": "PDF Security App",
+    "Version": "3.0 - Ultra Secured Edition",
+    "Framework": ".NET 8.0",
+    "Libraries": [
+      "PdfSharp 6.0 - Manipulation PDF",
+      "BouncyCastle 2.4.0 - Cryptographie avancée",
+      "ImageSharp 3.0 - Traitement d'images",
+      "QRCoder 1.6.0 - Génération QR Codes",
+      "Serilog 8.0 - Logging sécurisé"
+    ]
+  },
+  "SecurityNotices": {
+    "CriticalWarning": "⚠️ Document protégé par mesures de sécurité maximales",
+    "PasswordInfo": "\uD83D\uDD11 Mot de passe propriétaire dans fichier séparé",
+    "IntegrityVerification": "✅ Vérifier hash SHA-256 + chaîne blockchain",
+    "LegalNotice": "\uD83D\uDCDC Modification non autorisée interdite et traçable",
+    "ExpirationWarning": "⏰ Vérifier date d'expiration dans métadonnées",
+    "VerificationMethod": "\uD83D\uDCF1 Scanner QR Code pour vérifier authenticité"
+  },
+  "ProofMetadata": {
+    "ProofType": "Enhanced Cryptographic Certificate v3.0",
+    "Standards": [
+      "RFC3161",
+      "PAdES",
+      "ISO32000",
+      "eIDAS"
+    ],
+    "GeneratedAt": "2025-10-13T20:41:09.0595207Z",
+    "ValidUntil": "2035-10-13T20:41:09.059521Z",
+    "CertificateAuthority": "PDF Security App v3.0 - Self-Signed",
+    "UniqueIdentifier": "94e5e1c2-30ea-4ca8-929b-cb795018f809",
+    "BlockchainVerifiable": true,
+    "BiometricAuthentication": true
+  }
+}

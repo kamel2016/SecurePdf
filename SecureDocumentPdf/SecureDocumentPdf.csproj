@@ -33,4 +33,15 @@
     <PackageReference Include="System.Drawing.Common" Version="9.0.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\drapeau tchad.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\Images\logo_ministere.png" />
+  </ItemGroup>
+
 </Project>
