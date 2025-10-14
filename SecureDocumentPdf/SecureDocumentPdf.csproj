@@ -34,19 +34,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\Images\barre_tchad-removebg-preview.png">
+    <Content Update="wwwroot\images\barre_tchad-removebg-preview.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Images\barre_tchad.jpg">
+    <Content Update="wwwroot\images\barre_tchad.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Images\drapeau tchad.jpeg">
+    <Content Update="wwwroot\images\drapeau tchad.jpeg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Images\logo_ministere.png">
+    <Content Update="wwwroot\images\logo_ministere.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Images\logo_ministere_1.png">
+    <Content Update="wwwroot\images\logo_ministere_1.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
