@@ -5,6 +5,8 @@ using SecureDocumentPdf.Services.Interface;
 using SecureDocumentPdf.Services;
 using Microsoft.AspNetCore.StaticFiles;
 using QuestPDF.Infrastructure;
+using SecureDocumentPdf.Services.Interface;
+using SecureDocumentPdf.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,10 +51,21 @@ builder.Services.AddControllers();
 // Service personnalisé de traitement PDF
 builder.Services.AddScoped<IPdfSecurityService, PdfSecurityService>();
 
+// Service de transfert securise de fichiers
+builder.Services.AddScoped<IFileTransferService, FileTransferService>();
+
 // Configuration de la taille maximale des uploads (50MB)
 builder.Services.Configure<Microsoft.AspNetCore.Http.Features.FormOptions>(options =>
 {
     options.MultipartBodyLengthLimit = 52428800; // 50MB
+});
+
+builder.Services.AddSingleton<IPdfSecurityValidator, PdfSecurityValidator>();
+
+// Configuration pour les transferts de fichiers (2 GB)
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Limits.MaxRequestBodySize = 2_147_483_648; // 2 GB
 });
 
 // ========================================
@@ -63,7 +76,6 @@ var app = builder.Build();
 // ========================================
 // CONFIGURATION DU PIPELINE HTTP
 // ========================================
-
 // Gestion des erreurs selon l'environnement
 if (!app.Environment.IsDevelopment())
 {
@@ -95,6 +107,9 @@ app.UseStaticFiles(new StaticFileOptions
     DefaultContentType = "application/octet-stream"
 });
 
+//app.MapGet("/", () => Results.Redirect("/PdfViewer"));
+
+app.MapControllers();
 
 //app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -142,6 +157,14 @@ Log.Information("========================================");
 // ========================================
 try
 {
+    // Nettoyage automatique des transferts expires toutes les heures
+    var timer = new System.Threading.Timer(async _ =>
+    {
+        using var scope = app.Services.CreateScope();
+        var transferService = scope.ServiceProvider.GetRequiredService<IFileTransferService>();
+        await transferService.CleanupExpiredTransfersAsync();
+    }, null, TimeSpan.Zero, TimeSpan.FromHours(1));
+
     app.Run();
 }
 catch (Exception ex)

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureDocumentPdf", "SecureDocumentPdf\SecureDocumentPdf.csproj", "{BB0F4980-3E08-4018-9F2C-E60B561C39CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecureDocumentPdf", "SecureDocumentPdf\SecureDocumentPdf.csproj", "{BB0F4980-3E08-4018-9F2C-E60B561C39CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

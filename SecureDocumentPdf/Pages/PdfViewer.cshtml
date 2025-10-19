@@ -1,0 +1,238 @@
+﻿@page
+@model SecureDocumentPdf.Pages.PdfViewerModel
+@{
+    ViewData["Title"] = "Visualiseur PDF Sécurisé";
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <link rel="stylesheet" href="~/css/pdfviewer.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Header avec logo et titre -->
+        <header class="viewer-header">
+            <div class="header-content">
+                <h1>🔐 Visualiseur PDF Sécurisé</h1>
+                <p class="subtitle">Validation et visualisation de documents protégés</p>
+            </div>
+        </header>
+
+        <!-- Zone d'upload -->
+        <section class="upload-section" id="uploadSection">
+            <div class="upload-card">
+                <div class="upload-icon">📄</div>
+                <h2>Sélectionnez un document PDF</h2>
+                <p>Le document sera vérifié avant affichage</p>
+                
+                <div class="upload-form">
+                    <input type="file" 
+                           id="pdfFileInput" 
+                           accept=".pdf,application/pdf" 
+                           class="file-input" />
+                    
+                    <label for="pdfFileInput" class="file-label">
+                        <span class="btn-icon">📁</span>
+                        <span>Choisir un fichier PDF</span>
+                    </label>
+                    
+                    <div class="file-info" id="fileInfo" style="display: none;">
+                        <span id="fileName"></span>
+                        <span id="fileSize"></span>
+                    </div>
+                </div>
+
+                <!-- Options avancées -->
+                <div class="advanced-options">
+                    <button type="button" class="btn-toggle" id="toggleAdvanced">
+                        Options avancées ▼
+                    </button>
+                    
+                    <div class="advanced-content" id="advancedContent" style="display: none;">
+                        <div class="form-group">
+                            <label for="expectedHash">Hash attendu (SHA-256) :</label>
+                            <input type="text" 
+                                   id="expectedHash" 
+                                   placeholder="Optionnel - pour vérifier l'intégrité"
+                                   class="form-control" />
+                            <small>Si fourni, le document sera vérifié contre ce hash</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="userPassword">Mot de passe (si protégé) :</label>
+                            <input type="password" 
+                                   id="userPassword" 
+                                   placeholder="Optionnel"
+                                   class="form-control" />
+                            <small>Nécessaire si le PDF est protégé par mot de passe</small>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" 
+                        id="validateBtn" 
+                        class="btn-primary" 
+                        disabled>
+                    <span class="btn-icon">🔍</span>
+                    Valider et Afficher
+                </button>
+            </div>
+        </section>
+
+        <!-- Zone de validation (loading) -->
+        <section class="validation-section" id="validationSection" style="display: none;">
+            <div class="validation-card">
+                <div class="spinner"></div>
+                <h3>Validation en cours...</h3>
+                <p id="validationStatus">Vérification de la sécurité du document</p>
+                
+                <div class="validation-steps">
+                    <div class="step" id="step1">
+                        <span class="step-icon">⏳</span>
+                        <span>Vérification du format</span>
+                    </div>
+                    <div class="step" id="step2">
+                        <span class="step-icon">⏳</span>
+                        <span>Vérification de l'intégrité</span>
+                    </div>
+                    <div class="step" id="step3">
+                        <span class="step-icon">⏳</span>
+                        <span>Extraction des permissions</span>
+                    </div>
+                    <div class="step" id="step4">
+                        <span class="step-icon">⏳</span>
+                        <span>Génération du token</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Résultats de validation -->
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <!-- Succès -->
+            <div class="result-card success" id="successCard" style="display: none;">
+                <div class="result-icon">✅</div>
+                <h3>Document Validé avec Succès</h3>
+                <p>Le document est sécurisé et peut être affiché</p>
+                
+                <div class="security-info">
+                    <h4>Informations de Sécurité</h4>
+                    <div class="info-grid" id="securityInfoGrid">
+                        <!-- Rempli dynamiquement -->
+                    </div>
+                </div>
+                
+                <div class="permissions-info">
+                    <h4>Permissions du Document</h4>
+                    <div class="permissions-grid" id="permissionsGrid">
+                        <!-- Rempli dynamiquement -->
+                    </div>
+                </div>
+                
+                <button type="button" id="viewPdfBtn" class="btn-success">
+                    <span class="btn-icon">👁️</span>
+                    Afficher le PDF
+                </button>
+            </div>
+
+            <!-- Erreur -->
+            <div class="result-card error" id="errorCard" style="display: none;">
+                <div class="result-icon">❌</div>
+                <h3>Validation Échouée</h3>
+                <p id="errorMessage">Le document ne peut pas être affiché</p>
+                
+                <div class="error-details" id="errorDetails">
+                    <!-- Rempli dynamiquement -->
+                </div>
+                
+                <button type="button" id="retryBtn" class="btn-secondary">
+                    <span class="btn-icon">🔄</span>
+                    Réessayer avec un autre fichier
+                </button>
+            </div>
+        </section>
+
+        <!-- Visualiseur PDF -->
+        <section class="viewer-section" id="viewerSection" style="display: none;">
+            <div class="viewer-controls">
+                <div class="controls-left">
+                    <button type="button" id="closeViewerBtn" class="btn-icon-only" title="Fermer">
+                        ❌
+                    </button>
+                    <span class="document-title" id="documentTitle"></span>
+                </div>
+                
+                <div class="controls-center">
+                    <button type="button" id="prevPageBtn" class="btn-icon-only" title="Page précédente">
+                        ◀
+                    </button>
+                    <span class="page-info">
+                        Page <span id="currentPage">1</span> / <span id="totalPages">1</span>
+                    </span>
+                    <button type="button" id="nextPageBtn" class="btn-icon-only" title="Page suivante">
+                        ▶
+                    </button>
+                </div>
+                
+                <div class="controls-right">
+                    <button type="button" id="zoomOutBtn" class="btn-icon-only" title="Zoom arrière">
+                        🔍-
+                    </button>
+                    <span class="zoom-info" id="zoomLevel">100%</span>
+                    <button type="button" id="zoomInBtn" class="btn-icon-only" title="Zoom avant">
+                        🔍+
+                    </button>
+                    
+                    <button type="button" id="printBtn" class="btn-icon-only" title="Imprimer" disabled>
+                        🖨️
+                    </button>
+                    <button type="button" id="downloadBtn" class="btn-icon-only" title="Télécharger" disabled>
+                        💾
+                    </button>
+                </div>
+            </div>
+
+            <!-- Barre d'alerte sécurité -->
+            <div class="security-banner" id="securityBanner">
+                <span class="banner-icon">🔒</span>
+                <span id="securityBannerText">Document sécurisé - Lecture seule</span>
+            </div>
+
+            <!-- Canvas pour le rendu PDF -->
+            <div class="pdf-container" id="pdfContainer">
+                <canvas id="pdfCanvas"></canvas>
+                
+                <!-- Overlay watermark supplémentaire (optionnel) -->
+                <div class="viewer-watermark" id="viewerWatermark" style="display: none;">
+                    DOCUMENT CONFIDENTIEL
+                </div>
+            </div>
+
+            <!-- Protection contre copie -->
+            <div class="copy-protection-overlay" id="copyProtectionOverlay" style="display: none;"></div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/js/pdfviewer.js"></script>
+    
+    <script>
+        // Configuration PDF.js
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+</body>
+</html>
+
+@section Scripts {
+    <script>
+        // Variables globales pour la page Razor
+        window.API_BASE_URL = '@Url.Content("~/api/pdfviewer")';
+    </script>
+}

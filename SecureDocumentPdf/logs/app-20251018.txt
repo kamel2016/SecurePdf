@@ -1,0 +1,170 @@
+[2025-10-18 10:13:04 INF] ========================================
+[2025-10-18 10:13:04 INF] Application PDF Security démarrée
+[2025-10-18 10:13:04 INF] ========================================
+[2025-10-18 10:13:05 INF] Mode : Development
+[2025-10-18 10:13:06 INF] Dossiers créés avec succès
+[2025-10-18 10:13:06 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-18 10:13:06 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-18 10:13:06 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-18 10:13:06 INF] ========================================
+[2025-10-18 10:13:06 INF] Application prête !
+[2025-10-18 10:13:06 INF] URL : https://localhost:7001
+[2025-10-18 10:13:06 INF] Environment : Development
+[2025-10-18 10:13:06 INF] ========================================
+[2025-10-18 10:13:08 INF] Page visualiseur PDF chargée
+[2025-10-18 10:15:00 INF] ========================================
+[2025-10-18 10:15:00 INF] Application PDF Security démarrée
+[2025-10-18 10:15:00 INF] ========================================
+[2025-10-18 10:15:00 INF] Mode : Development
+[2025-10-18 10:15:00 INF] Dossiers créés avec succès
+[2025-10-18 10:15:01 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-18 10:15:01 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-18 10:15:01 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-18 10:15:01 INF] ========================================
+[2025-10-18 10:15:01 INF] Application prête !
+[2025-10-18 10:15:01 INF] URL : https://localhost:7001
+[2025-10-18 10:15:01 INF] Environment : Development
+[2025-10-18 10:15:01 INF] ========================================
+[2025-10-18 10:15:02 INF] Page visualiseur PDF chargée
+[2025-10-18 10:15:11 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'SecureDocumentPdf.Services.Interface.IPdfSecurityValidator' while attempting to activate 'SecureDocumentPdf.Controllers.PdfViewerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method31(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2025-10-18 10:15:33 INF] Page visualiseur PDF chargée
+[2025-10-18 10:18:32 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'SecureDocumentPdf.Services.Interface.IPdfSecurityValidator' while attempting to activate 'SecureDocumentPdf.Controllers.PdfViewerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method31(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2025-10-18 10:20:45 INF] ========================================
+[2025-10-18 10:20:45 INF] Application PDF Security démarrée
+[2025-10-18 10:20:45 INF] ========================================
+[2025-10-18 10:20:46 INF] Mode : Development
+[2025-10-18 10:20:46 INF] Dossiers créés avec succès
+[2025-10-18 10:20:46 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-18 10:20:46 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-18 10:20:46 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-18 10:20:46 INF] ========================================
+[2025-10-18 10:20:46 INF] Application prête !
+[2025-10-18 10:20:46 INF] URL : https://localhost:7001
+[2025-10-18 10:20:46 INF] Environment : Development
+[2025-10-18 10:20:46 INF] ========================================
+[2025-10-18 10:20:50 INF] Page visualiseur PDF chargée
+[2025-10-18 10:20:57 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'SecureDocumentPdf.Services.Interface.IPdfSecurityValidator' while attempting to activate 'SecureDocumentPdf.Controllers.PdfViewerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method31(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2025-10-18 10:21:16 INF] ========================================
+[2025-10-18 10:21:16 INF] Application PDF Security démarrée
+[2025-10-18 10:21:16 INF] ========================================
+[2025-10-18 10:21:17 INF] Mode : Development
+[2025-10-18 10:21:17 INF] Dossiers créés avec succès
+[2025-10-18 10:21:17 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-18 10:21:17 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-18 10:21:17 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-18 10:21:17 INF] ========================================
+[2025-10-18 10:21:17 INF] Application prête !
+[2025-10-18 10:21:17 INF] URL : https://localhost:7001
+[2025-10-18 10:21:17 INF] Environment : Development
+[2025-10-18 10:21:17 INF] ========================================
+[2025-10-18 10:21:19 INF] Page visualiseur PDF chargée
+[2025-10-18 10:22:07 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'SecureDocumentPdf.Services.Interface.IPdfSecurityValidator' while attempting to activate 'SecureDocumentPdf.Controllers.PdfViewerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method31(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2025-10-18 10:24:55 INF] ========================================
+[2025-10-18 10:24:55 INF] Application PDF Security démarrée
+[2025-10-18 10:24:55 INF] ========================================
+[2025-10-18 10:24:55 INF] Mode : Development
+[2025-10-18 10:24:58 INF] Dossiers créés avec succès
+[2025-10-18 10:24:58 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-18 10:24:58 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-18 10:24:58 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-18 10:24:58 INF] ========================================
+[2025-10-18 10:24:58 INF] Application prête !
+[2025-10-18 10:24:58 INF] URL : https://localhost:7001
+[2025-10-18 10:24:58 INF] Environment : Development
+[2025-10-18 10:24:58 INF] ========================================
+[2025-10-18 10:25:01 INF] Page visualiseur PDF chargée
+[2025-10-18 10:25:25 INF] Validation PDF réussie pour SECURED_20251013_224109_fiche article rempli.pdf
+[2025-10-18 10:25:25 INF] PDF validé avec succès: SECURED_20251013_224109_fiche article rempli.pdf
+[2025-10-18 17:36:00 INF] ========================================
+[2025-10-18 17:36:01 INF] Application PDF Security démarrée
+[2025-10-18 17:36:01 INF] ========================================
+[2025-10-18 17:38:48 INF] ========================================
+[2025-10-18 17:38:48 INF] Application PDF Security démarrée
+[2025-10-18 17:38:48 INF] ========================================
+[2025-10-18 17:38:49 INF] Mode : Development
+[2025-10-18 17:38:57 INF] Dossiers créés avec succès
+[2025-10-18 17:38:57 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-18 17:38:57 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-18 17:38:57 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-18 17:38:57 INF] ========================================
+[2025-10-18 17:38:57 INF] Application prête !
+[2025-10-18 17:38:57 INF] URL : https://localhost:7001
+[2025-10-18 17:38:57 INF] Environment : Development
+[2025-10-18 17:38:57 INF] ========================================
+[2025-10-18 17:39:18 INF] Page visualiseur PDF chargée
+[2025-10-18 17:39:23 INF] Page transfert chargee - Mode: upload
+[2025-10-18 17:41:02 INF] Transfert cree : 230d67564847413eb92df04210c49c43, Fichier : PLATEFORME DE SÉCURISATION ET VISUALISATION.pdf, Taille : 1295848 bytes
+[2025-10-18 17:41:02 INF] Transfert cree avec succes : 230d67564847413eb92df04210c49c43
+[2025-10-18 23:59:06 INF] ========================================
+[2025-10-18 23:59:07 INF] Application PDF Security démarrée
+[2025-10-18 23:59:07 INF] ========================================
+[2025-10-18 23:59:13 INF] Mode : Development
+[2025-10-18 23:59:17 INF] Dossiers créés avec succès
+[2025-10-18 23:59:17 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-18 23:59:17 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-18 23:59:17 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-18 23:59:17 INF] ========================================
+[2025-10-18 23:59:17 INF] Application prête !
+[2025-10-18 23:59:17 INF] URL : https://localhost:7001
+[2025-10-18 23:59:17 INF] Environment : Development
+[2025-10-18 23:59:17 INF] ========================================

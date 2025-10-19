@@ -1,0 +1,248 @@
+[2025-10-19 00:00:13 INF] Page visualiseur PDF chargée
+[2025-10-19 00:00:44 INF] Validation PDF réussie pour SECURED_20251013_224109_fiche article rempli.pdf
+[2025-10-19 00:00:44 INF] PDF validé avec succès: SECURED_20251013_224109_fiche article rempli.pdf
+[2025-10-19 00:01:22 INF] Page visualiseur PDF chargée
+[2025-10-19 00:01:28 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:02:19 INF] Transfert cree : e75b3fb85113461bb7b711bf335e9a9f, Fichier : SECURED_20251013_224109_fiche article rempli.pdf, Taille : 117884 bytes
+[2025-10-19 00:02:19 INF] Transfert cree avec succes : e75b3fb85113461bb7b711bf335e9a9f
+[2025-10-19 00:07:04 INF] ========================================
+[2025-10-19 00:07:04 INF] Application PDF Security démarrée
+[2025-10-19 00:07:04 INF] ========================================
+[2025-10-19 00:07:06 INF] Mode : Development
+[2025-10-19 00:07:07 INF] Dossiers créés avec succès
+[2025-10-19 00:07:07 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-19 00:07:07 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-19 00:07:07 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-19 00:07:07 INF] ========================================
+[2025-10-19 00:07:07 INF] Application prête !
+[2025-10-19 00:07:07 INF] URL : https://localhost:7001
+[2025-10-19 00:07:07 INF] Environment : Development
+[2025-10-19 00:07:07 INF] ========================================
+[2025-10-19 00:07:18 INF] Page visualiseur PDF chargée
+[2025-10-19 00:07:21 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:08:03 INF] Transfert cree : faf905b4d6e548b684020c63bd17f919, Fichier : SECURED_20251013_224109_fiche article rempli.pdf, Taille : 117884 bytes
+[2025-10-19 00:08:03 INF] Transfert cree avec succes : faf905b4d6e548b684020c63bd17f919
+[2025-10-19 00:08:09 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:08:09 INF] Mode download detecte - TransferId: faf905b4d6e548b684020c63bd17f919
+[2025-10-19 00:12:26 INF] ========================================
+[2025-10-19 00:12:26 INF] Application PDF Security démarrée
+[2025-10-19 00:12:26 INF] ========================================
+[2025-10-19 00:12:26 INF] Mode : Development
+[2025-10-19 00:12:27 INF] Dossiers créés avec succès
+[2025-10-19 00:12:27 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-19 00:12:27 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-19 00:12:27 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-19 00:12:27 INF] ========================================
+[2025-10-19 00:12:27 INF] Application prête !
+[2025-10-19 00:12:27 INF] URL : https://localhost:7001
+[2025-10-19 00:12:27 INF] Environment : Development
+[2025-10-19 00:12:27 INF] ========================================
+[2025-10-19 00:12:33 INF] Page visualiseur PDF chargée
+[2025-10-19 00:12:50 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:13:35 INF] Transfert cree : 5ee7e864b3654d4caf7cdab35091cf61, Fichier : SECURED_20251013_224109_fiche article rempli.pdf, Taille : 117884 bytes
+[2025-10-19 00:13:35 INF] Transfert cree avec succes : 5ee7e864b3654d4caf7cdab35091cf61
+[2025-10-19 00:13:47 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:13:47 INF] Mode download detecte - TransferId: 5ee7e864b3654d4caf7cdab35091cf61
+[2025-10-19 00:14:33 INF] ========================================
+[2025-10-19 00:14:34 INF] Application PDF Security démarrée
+[2025-10-19 00:14:34 INF] ========================================
+[2025-10-19 00:14:35 INF] Mode : Development
+[2025-10-19 00:14:38 INF] Dossiers créés avec succès
+[2025-10-19 00:14:38 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-19 00:14:38 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-19 00:14:38 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-19 00:14:38 INF] ========================================
+[2025-10-19 00:14:38 INF] Application prête !
+[2025-10-19 00:14:38 INF] URL : https://localhost:7001
+[2025-10-19 00:14:38 INF] Environment : Development
+[2025-10-19 00:14:38 INF] ========================================
+[2025-10-19 00:14:50 INF] Page visualiseur PDF chargée
+[2025-10-19 00:14:55 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:15:24 INF] Transfert cree : 699ceac874614afdb3caefeb8a25b181, Fichier : SECURED_20251013_224109_fiche article rempli.pdf, Taille : 117884 bytes
+[2025-10-19 00:15:24 INF] Transfert cree avec succes : 699ceac874614afdb3caefeb8a25b181
+[2025-10-19 00:15:40 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:15:40 INF] Mode download detecte - TransferId: 699ceac874614afdb3caefeb8a25b181
+[2025-10-19 00:18:47 INF] ========================================
+[2025-10-19 00:18:47 INF] Application PDF Security démarrée
+[2025-10-19 00:18:47 INF] ========================================
+[2025-10-19 00:18:48 INF] Mode : Development
+[2025-10-19 00:18:49 INF] Dossiers créés avec succès
+[2025-10-19 00:18:49 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-19 00:18:49 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-19 00:18:49 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-19 00:18:49 INF] ========================================
+[2025-10-19 00:18:49 INF] Application prête !
+[2025-10-19 00:18:49 INF] URL : https://localhost:7001
+[2025-10-19 00:18:49 INF] Environment : Development
+[2025-10-19 00:18:49 INF] ========================================
+[2025-10-19 00:19:21 INF] Page visualiseur PDF chargée
+[2025-10-19 00:19:26 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:19:55 INF] Transfert cree : bee7f228c5e64ec2bbd06829b38110a6, Fichier : SECURED_20251013_224109_fiche article rempli.pdf, Taille : 117884 bytes
+[2025-10-19 00:19:55 INF] Transfert cree avec succes : bee7f228c5e64ec2bbd06829b38110a6
+[2025-10-19 00:20:06 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:20:06 INF] Mode download detecte - TransferId: bee7f228c5e64ec2bbd06829b38110a6
+[2025-10-19 00:20:18 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:20:18 INF] Mode download detecte - TransferId: bee7f228c5e64ec2bbd06829b38110a6
+[2025-10-19 00:20:22 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:20:22 INF] Mode download detecte - TransferId: bee7f228c5e64ec2bbd06829b38110a6
+[2025-10-19 00:26:19 INF] ========================================
+[2025-10-19 00:26:19 INF] Application PDF Security démarrée
+[2025-10-19 00:26:19 INF] ========================================
+[2025-10-19 00:26:20 INF] Mode : Development
+[2025-10-19 00:26:23 INF] Dossiers créés avec succès
+[2025-10-19 00:26:23 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-19 00:26:23 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-19 00:26:23 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-19 00:26:23 INF] ========================================
+[2025-10-19 00:26:23 INF] Application prête !
+[2025-10-19 00:26:23 INF] URL : https://localhost:7001
+[2025-10-19 00:26:23 INF] Environment : Development
+[2025-10-19 00:26:23 INF] ========================================
+[2025-10-19 00:27:47 INF] Page visualiseur PDF chargée
+[2025-10-19 00:27:47 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: RenderSectionAsync invocation in '/Pages/Shared/_Layout.cshtml' is invalid. The section 'Scripts' has already been rendered.
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSectionAsyncCore(String sectionName, Boolean required)
+   at SecureDocumentPdf.Pages.Shared.Pages_Shared__Layout.<ExecuteAsync>b__27_1()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at SecureDocumentPdf.Pages.Shared.Pages_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2025-10-19 00:29:04 INF] ========================================
+[2025-10-19 00:29:04 INF] Application PDF Security démarrée
+[2025-10-19 00:29:05 INF] ========================================
+[2025-10-19 00:29:08 INF] Mode : Development
+[2025-10-19 00:29:09 INF] Dossiers créés avec succès
+[2025-10-19 00:29:09 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-19 00:29:09 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-19 00:29:09 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-19 00:29:09 INF] ========================================
+[2025-10-19 00:29:09 INF] Application prête !
+[2025-10-19 00:29:09 INF] URL : https://localhost:7001
+[2025-10-19 00:29:09 INF] Environment : Development
+[2025-10-19 00:29:09 INF] ========================================
+[2025-10-19 00:29:43 INF] Page visualiseur PDF chargée
+[2025-10-19 00:29:55 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:31:32 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:32:10 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:32:12 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:32:23 INF] Page visualiseur PDF chargée
+[2025-10-19 00:32:27 INF] Page visualiseur PDF chargée
+[2025-10-19 00:32:29 INF] Page visualiseur PDF chargée
+[2025-10-19 00:32:34 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:33:01 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:33:04 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:34:07 INF] ========================================
+[2025-10-19 00:34:07 INF] Application PDF Security démarrée
+[2025-10-19 00:34:07 INF] ========================================
+[2025-10-19 00:34:08 INF] Mode : Development
+[2025-10-19 00:34:08 INF] Dossiers créés avec succès
+[2025-10-19 00:34:08 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-19 00:34:08 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-19 00:34:08 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-19 00:34:08 INF] ========================================
+[2025-10-19 00:34:08 INF] Application prête !
+[2025-10-19 00:34:08 INF] URL : https://localhost:7001
+[2025-10-19 00:34:08 INF] Environment : Development
+[2025-10-19 00:34:08 INF] ========================================
+[2025-10-19 00:35:09 INF] Page visualiseur PDF chargée
+[2025-10-19 00:35:14 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:35:35 INF] Transfert cree : 34d00ab80e0b483ba5c4c56adb4719e9, Fichier : DS1.pdf, Taille : 33113 bytes
+[2025-10-19 00:35:35 INF] Transfert cree avec succes : 34d00ab80e0b483ba5c4c56adb4719e9
+[2025-10-19 00:35:44 INF] Page transfert chargee - Mode: upload
+[2025-10-19 00:35:44 INF] Mode download detecte - TransferId: 34d00ab80e0b483ba5c4c56adb4719e9
+[2025-10-19 10:17:32 INF] ========================================
+[2025-10-19 10:17:33 INF] Application PDF Security démarrée
+[2025-10-19 10:17:33 INF] ========================================
+[2025-10-19 10:17:33 INF] Mode : Development
+[2025-10-19 10:17:35 INF] Dossiers créés avec succès
+[2025-10-19 10:17:35 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-19 10:17:35 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-19 10:17:35 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-19 10:17:35 INF] ========================================
+[2025-10-19 10:17:35 INF] Application prête !
+[2025-10-19 10:17:35 INF] URL : https://localhost:7001
+[2025-10-19 10:17:35 INF] Environment : Development
+[2025-10-19 10:17:35 INF] ========================================
+[2025-10-19 10:17:39 INF] Page visualiseur PDF chargée
+[2025-10-19 10:17:42 INF] Page visualiseur PDF chargée
+[2025-10-19 10:17:47 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-19 10:17:49 INF] Page transfert chargee - Mode: upload
+[2025-10-19 10:18:24 INF] Transfert cree : 3f885fd3ddfb415c97f782d7946d9613, Fichier : SECURED_20251013_224109_fiche article rempli.pdf, Taille : 117884 bytes
+[2025-10-19 10:18:24 INF] Transfert cree avec succes : 3f885fd3ddfb415c97f782d7946d9613
+[2025-10-19 10:18:32 INF] Page transfert chargee - Mode: upload
+[2025-10-19 10:18:32 INF] Mode download detecte - TransferId: 3f885fd3ddfb415c97f782d7946d9613
+[2025-10-19 10:18:40 INF] Telechargement reussi : 3f885fd3ddfb415c97f782d7946d9613, Telechargements : 1/10
+[2025-10-19 10:19:39 INF] Transfert cree : b1b6ac1046614da09e431882d91356f0, Fichier : DS1.pdf, Taille : 33113 bytes
+[2025-10-19 10:19:39 INF] Transfert cree avec succes : b1b6ac1046614da09e431882d91356f0
+[2025-10-19 10:19:46 INF] Page transfert chargee - Mode: upload
+[2025-10-19 10:19:46 INF] Mode download detecte - TransferId: b1b6ac1046614da09e431882d91356f0
+[2025-10-19 10:19:52 INF] Telechargement reussi : b1b6ac1046614da09e431882d91356f0, Telechargements : 1/10
+[2025-10-19 10:23:38 INF] ========================================
+[2025-10-19 10:23:38 INF] Application PDF Security démarrée
+[2025-10-19 10:23:38 INF] ========================================
+[2025-10-19 10:23:39 INF] Mode : Development
+[2025-10-19 10:23:39 INF] Dossiers créés avec succès
+[2025-10-19 10:23:39 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-19 10:23:39 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-19 10:23:39 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-19 10:23:39 INF] ========================================
+[2025-10-19 10:23:39 INF] Application prête !
+[2025-10-19 10:23:39 INF] URL : https://localhost:7001
+[2025-10-19 10:23:39 INF] Environment : Development
+[2025-10-19 10:23:39 INF] ========================================
+[2025-10-19 10:23:41 INF] Page visualiseur PDF chargée
+[2025-10-19 10:23:44 INF] Page transfert chargee - Mode: upload
+[2025-10-19 10:24:09 INF] Transfert cree : 305d19e7ebf04f5f8b2efc599701bd4b, Fichier : barre_tchad.png, Taille : 2598 bytes
+[2025-10-19 10:24:09 INF] Transfert cree avec succes : 305d19e7ebf04f5f8b2efc599701bd4b
+[2025-10-19 10:24:18 INF] Page transfert chargee - Mode: upload
+[2025-10-19 10:24:18 INF] Mode download detecte - TransferId: 305d19e7ebf04f5f8b2efc599701bd4b
+[2025-10-19 10:24:20 INF] Telechargement reussi : 305d19e7ebf04f5f8b2efc599701bd4b, Telechargements : 1/10
+[2025-10-19 10:25:03 INF] ========================================
+[2025-10-19 10:25:04 INF] Application PDF Security démarrée
+[2025-10-19 10:25:04 INF] ========================================
+[2025-10-19 10:25:04 INF] Mode : Development
+[2025-10-19 10:25:04 INF] Dossiers créés avec succès
+[2025-10-19 10:25:04 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-19 10:25:04 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-19 10:25:04 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-19 10:25:04 INF] ========================================
+[2025-10-19 10:25:04 INF] Application prête !
+[2025-10-19 10:25:04 INF] URL : https://localhost:7001
+[2025-10-19 10:25:04 INF] Environment : Development
+[2025-10-19 10:25:04 INF] ========================================
+[2025-10-19 10:25:05 INF] Page visualiseur PDF chargée
+[2025-10-19 10:25:08 INF] Page visualiseur PDF chargée
+[2025-10-19 10:25:09 INF] Page visualiseur PDF chargée
+[2025-10-19 10:25:15 INF] Page visualiseur PDF chargée
+[2025-10-19 10:29:53 INF] ========================================
+[2025-10-19 10:29:53 INF] Application PDF Security démarrée
+[2025-10-19 10:29:53 INF] ========================================
+[2025-10-19 10:29:53 INF] Mode : Development
+[2025-10-19 10:29:54 INF] Dossiers créés avec succès
+[2025-10-19 10:29:54 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-10-19 10:29:54 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-10-19 10:29:54 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-10-19 10:29:54 INF] ========================================
+[2025-10-19 10:29:54 INF] Application prête !
+[2025-10-19 10:29:54 INF] URL : https://localhost:7001
+[2025-10-19 10:29:54 INF] Environment : Development
+[2025-10-19 10:29:54 INF] ========================================
+[2025-10-19 10:29:58 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-10-19 10:30:05 INF] Page transfert chargee - Mode: upload

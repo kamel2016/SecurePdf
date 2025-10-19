@@ -1,0 +1,213 @@
+﻿@page
+@model TransferModel
+@{
+    ViewData["Title"] = "Transfert Securise de Fichiers";
+}
+
+<link rel="stylesheet" href="~/css/transfer.css" />
+
+<div class="container">
+    <!-- Header -->
+    <header class="transfer-header">
+        <h1>Transfert Securise de Fichiers</h1>
+        <p class="subtitle">Partagez vos fichiers de maniere securisee avec chiffrement de bout en bout</p>
+    </header>
+
+    <!-- Section Upload -->
+    <section class="upload-section" id="uploadSection">
+        <div class="upload-card">
+            <div class="upload-icon">📤</div>
+            <h2>Envoyer un fichier</h2>
+
+            <!-- Zone de drop -->
+            <div class="drop-zone" id="dropZone">
+                <input type="file" id="fileInput" class="file-input" />
+                <div class="drop-zone-content">
+                    <p class="drop-zone-text">Glissez-deposez votre fichier ici</p>
+                    <p class="drop-zone-or">ou</p>
+                    <label for="fileInput" class="btn-select">
+                        Choisir un fichier
+                    </label>
+                    <p class="drop-zone-info">Taille maximale : 2 GB</p>
+                </div>
+            </div>
+
+            <!-- Fichier selectionne -->
+            <div class="file-selected" id="fileSelected" style="display: none;">
+                <div class="file-info">
+                    <span class="file-icon">📄</span>
+                    <div class="file-details">
+                        <p class="file-name" id="fileName"></p>
+                        <p class="file-size" id="fileSize"></p>
+                    </div>
+                    <button type="button" class="btn-remove" id="btnRemoveFile">✕</button>
+                </div>
+            </div>
+
+            <!-- Formulaire de configuration -->
+            <form id="transferForm" class="transfer-form" style="display: none;">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="senderEmail">Votre email *</label>
+                        <input type="email" id="senderEmail" required placeholder="expediteur@@example.com" />
+                    </div>
+                    <div class="form-group">
+                        <label for="senderName">Votre nom</label>
+                        <input type="text" id="senderName" placeholder="Optionnel" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="recipientEmail">Email destinataire</label>
+                    <input type="email" id="recipientEmail" placeholder="Optionnel - pour notification" />
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="3" placeholder="Message optionnel pour le destinataire"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expirationHours">Expire apres</label>
+                        <select id="expirationHours">
+                            <option value="1">1 heure</option>
+                            <option value="6">6 heures</option>
+                            <option value="24" selected>24 heures</option>
+                            <option value="72">3 jours</option>
+                            <option value="168">7 jours</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="maxDownloads">Telechargements max</label>
+                        <select id="maxDownloads">
+                            <option value="1">1 telechargement</option>
+                            <option value="5">5 telechargements</option>
+                            <option value="10" selected>10 telechargements</option>
+                            <option value="50">50 telechargements</option>
+                            <option value="999999">Illimite</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mot de passe (optionnel)</label>
+                    <input type="password" id="password" placeholder="Protection supplementaire" />
+                    <small>Le destinataire devra saisir ce mot de passe pour telecharger</small>
+                </div>
+
+                <button type="submit" class="btn-primary" id="btnSendFile">
+                    <span class="btn-icon">🚀</span>
+                    Creer le lien de partage
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Section Upload Progress -->
+    <section class="progress-section" id="progressSection" style="display: none;">
+        <div class="progress-card">
+            <div class="spinner"></div>
+            <h3>Preparation du transfert...</h3>
+            <p id="progressText">Chiffrement du fichier en cours</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-percent" id="progressPercent">0%</p>
+        </div>
+    </section>
+
+    <!-- Section Success -->
+    <section class="success-section" id="successSection" style="display: none;">
+        <div class="success-card">
+            <div class="success-icon">✅</div>
+            <h3>Transfert cree avec succes !</h3>
+            <p>Votre fichier est pret a etre partage</p>
+
+            <div class="share-link-container">
+                <label>Lien de partage :</label>
+                <div class="share-link-box">
+                    <input type="text" id="shareLink" readonly />
+                    <button type="button" class="btn-copy" id="btnCopyLink">
+                        📋 Copier
+                    </button>
+                </div>
+            </div>
+
+            <div class="transfer-details">
+                <h4>Details du transfert :</h4>
+                <div class="detail-item">
+                    <span class="detail-label">Fichier :</span>
+                    <span class="detail-value" id="detailFileName"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Taille :</span>
+                    <span class="detail-value" id="detailFileSize"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Expire le :</span>
+                    <span class="detail-value" id="detailExpiration"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Telechargements max :</span>
+                    <span class="detail-value" id="detailMaxDownloads"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Protege par mot de passe :</span>
+                    <span class="detail-value" id="detailPassword"></span>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button type="button" class="btn-secondary" id="btnNewTransfer">
+                    Nouveau transfert
+                </button>
+                <button type="button" class="btn-primary" id="btnViewStats">
+                    Voir les statistiques
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Download (pour le destinataire) -->
+    <section class="download-section" id="downloadSection" style="display: none;">
+        <div class="download-card">
+            <div class="download-icon">📥</div>
+            <h2>Telecharger le fichier</h2>
+
+            <div class="file-info-box">
+                <p><strong>Fichier :</strong> <span id="dlFileName"></span></p>
+                <p><strong>Taille :</strong> <span id="dlFileSize"></span></p>
+                <p><strong>De :</strong> <span id="dlSenderName"></span></p>
+                <p><strong>Expire le :</strong> <span id="dlExpiresAt"></span></p>
+                <p><strong>Telechargements :</strong> <span id="dlDownloads"></span></p>
+            </div>
+
+            <div class="message-box" id="dlMessageBox" style="display: none;">
+                <h4>Message de l'expediteur :</h4>
+                <p id="dlMessage"></p>
+            </div>
+
+            <div class="password-box" id="passwordBox" style="display: none;">
+                <label for="downloadPassword">Ce fichier est protege par mot de passe :</label>
+                <input type="password" id="downloadPassword" placeholder="Entrez le mot de passe" />
+            </div>
+
+            <button type="button" class="btn-primary btn-large" id="btnDownload">
+                <span class="btn-icon">⬇️</span>
+                Telecharger le fichier
+            </button>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    <script>
+        window.transferParams = {
+            transferId: '@Model.TransferId',
+            token: '@Model.Token'
+        };
+        console.log('Transfer params:', window.transferParams);
+    </script>
+    <script src="~/js/transfer.js"></script>
+}
