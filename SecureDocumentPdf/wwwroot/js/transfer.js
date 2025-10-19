@@ -350,7 +350,7 @@ async function loadTransferInfo(transferId, token) {
             elements.btnDownload.disabled = true;
         }
 
-        // Stocker les infos pour le telechargement
+        // Stocker les infos pour le Téléchargement
         elements.btnDownload.dataset.transferId = transferId;
         elements.btnDownload.dataset.token = token;
 
@@ -367,7 +367,7 @@ async function handleDownload() {
 
     try {
         elements.btnDownload.disabled = true;
-        elements.btnDownload.textContent = 'Telechargement en cours...';
+        elements.btnDownload.textContent = 'Téléchargement en cours...';
 
         const response = await fetch(`${API_URL}/download`, {
             method: 'POST',
@@ -383,14 +383,14 @@ async function handleDownload() {
 
         if (!response.ok) {
             const error = await response.json();
-            throw new Error(error.message || 'Erreur lors du telechargement');
+            throw new Error(error.message || 'Erreur lors du Téléchargement');
         }
 
         // Recuperer le fichier
         const blob = await response.blob();
         const filename = getFilenameFromHeaders(response.headers) || 'fichier';
 
-        // Telecharger
+        // Télécharger
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
@@ -401,16 +401,16 @@ async function handleDownload() {
         document.body.removeChild(a);
 
         // Succes
-        elements.btnDownload.textContent = '✅ Telechargement reussi !';
+        elements.btnDownload.textContent = '✅ Téléchargement reussi !';
         setTimeout(() => {
-            elements.btnDownload.textContent = '⬇️ Telecharger le fichier';
+            elements.btnDownload.textContent = '⬇️ Télécharger le fichier';
             elements.btnDownload.disabled = false;
         }, 3000);
 
     } catch (error) {
         console.error('Erreur:', error);
         alert('Erreur : ' + error.message);
-        elements.btnDownload.textContent = '⬇️ Telecharger le fichier';
+        elements.btnDownload.textContent = '⬇️ Télécharger le fichier';
         elements.btnDownload.disabled = false;
     }
 }

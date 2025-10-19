@@ -10,7 +10,7 @@
     <!-- Header -->
     <header class="transfer-header">
         <h1>Transfert Securise de Fichiers</h1>
-        <p class="subtitle">Partagez vos fichiers de maniere securisee avec chiffrement de bout en bout</p>
+        <p class="subtitle">Partagez vos fichiers de maniere sécurisée avec chiffrement de bout en bout</p>
     </header>
 
     <!-- Section Upload -->
@@ -79,12 +79,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="maxDownloads">Telechargements max</label>
+                        <label for="maxDownloads">Téléchargements max</label>
                         <select id="maxDownloads">
-                            <option value="1">1 telechargement</option>
-                            <option value="5">5 telechargements</option>
-                            <option value="10" selected>10 telechargements</option>
-                            <option value="50">50 telechargements</option>
+                            <option value="1">1 Téléchargement</option>
+                            <option value="5">5 Téléchargements</option>
+                            <option value="10" selected>10 Téléchargements</option>
+                            <option value="50">50 Téléchargements</option>
                             <option value="999999">Illimite</option>
                         </select>
                     </div>
@@ -93,7 +93,7 @@
                 <div class="form-group">
                     <label for="password">Mot de passe (optionnel)</label>
                     <input type="password" id="password" placeholder="Protection supplementaire" />
-                    <small>Le destinataire devra saisir ce mot de passe pour telecharger</small>
+                    <small>Le destinataire devra saisir ce mot de passe pour Télécharger</small>
                 </div>
 
                 <button type="submit" class="btn-primary" id="btnSendFile">
@@ -149,11 +149,11 @@
                     <span class="detail-value" id="detailExpiration"></span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">Telechargements max :</span>
+                    <span class="detail-label">Téléchargements max :</span>
                     <span class="detail-value" id="detailMaxDownloads"></span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">Protege par mot de passe :</span>
+                    <span class="detail-label">Protégé par mot de passe :</span>
                     <span class="detail-value" id="detailPassword"></span>
                 </div>
             </div>
@@ -173,14 +173,14 @@
     <section class="download-section" id="downloadSection" style="display: none;">
         <div class="download-card">
             <div class="download-icon">📥</div>
-            <h2>Telecharger le fichier</h2>
+            <h2>Télécharger le fichier</h2>
 
             <div class="file-info-box">
                 <p><strong>Fichier :</strong> <span id="dlFileName"></span></p>
                 <p><strong>Taille :</strong> <span id="dlFileSize"></span></p>
                 <p><strong>De :</strong> <span id="dlSenderName"></span></p>
                 <p><strong>Expire le :</strong> <span id="dlExpiresAt"></span></p>
-                <p><strong>Telechargements :</strong> <span id="dlDownloads"></span></p>
+                <p><strong>Téléchargements :</strong> <span id="dlDownloads"></span></p>
             </div>
 
             <div class="message-box" id="dlMessageBox" style="display: none;">
@@ -195,7 +195,7 @@
 
             <button type="button" class="btn-primary btn-large" id="btnDownload">
                 <span class="btn-icon">⬇️</span>
-                Telecharger le fichier
+                Télécharger le fichier
             </button>
         </div>
     </section>

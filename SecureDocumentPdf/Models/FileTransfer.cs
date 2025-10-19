@@ -59,7 +59,7 @@
     }
 
     /// <summary>
-    /// Log de telechargement
+    /// Log de Téléchargement
     /// </summary>
     public class DownloadLog
     {
@@ -98,7 +98,7 @@
     }
 
     /// <summary>
-    /// Requete pour telecharger un fichier
+    /// Requete pour Télécharger un fichier
     /// </summary>
     public class DownloadRequest
     {

@@ -95,7 +95,7 @@ namespace SecureDocumentPdf.Controllers
                     var baseUrl = $"{Request.Scheme}://{Request.Host}";
                     response.ShareUrl = $"{baseUrl}{response.ShareUrl}";
 
-                    _logger.LogInformation($"Transfert cree avec succes : {response.TransferId}");
+                    _logger.LogInformation($"Transfert créé avec succès : {response.TransferId}");
                     return Ok(response);
                 }
                 else
@@ -105,7 +105,7 @@ namespace SecureDocumentPdf.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Erreur lors de la creation du transfert");
+                _logger.LogError(ex, "Erreur lors de la création du transfert");
                 return StatusCode(500, new CreateTransferResponse
                 {
                     Success = false,
@@ -141,13 +141,13 @@ namespace SecureDocumentPdf.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Erreur recuperation info transfert : {transferId}");
+                _logger.LogError(ex, $"Erreur récupération info transfert : {transferId}");
                 return StatusCode(500, new { message = ex.Message });
             }
         }
 
         /// <summary>
-        /// Telecharge un fichier transfere
+        /// Télécharge un fichier transfere
         /// POST /api/filetransfer/download
         /// </summary>
         [HttpPost("download")]
@@ -165,7 +165,7 @@ namespace SecureDocumentPdf.Controllers
                 var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
                 var userAgent = Request.Headers["User-Agent"].ToString();
 
-                // Telecharger le fichier
+                // Télécharger le fichier
                 var (fileStream, fileName, contentType) = await _transferService.DownloadFileAsync(
                     request,
                     ipAddress,
@@ -175,18 +175,18 @@ namespace SecureDocumentPdf.Controllers
             }
             catch (UnauthorizedAccessException ex)
             {
-                _logger.LogWarning(ex, "Tentative d'acces non autorise");
+                _logger.LogWarning(ex, "Tentative d'accès non autorisé");
                 return Unauthorized(new { message = ex.Message });
             }
             catch (InvalidOperationException ex)
             {
-                _logger.LogWarning(ex, "Operation invalide");
+                _logger.LogWarning(ex, "Opération invalide");
                 return BadRequest(new { message = ex.Message });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Erreur lors du telechargement");
-                return StatusCode(500, new { message = "Erreur lors du telechargement" });
+                _logger.LogError(ex, "Erreur lors du téléchargement");
+                return StatusCode(500, new { message = "Erreur lors du téléchargement" });
             }
         }
 
@@ -208,7 +208,7 @@ namespace SecureDocumentPdf.Controllers
                 return Ok(new
                 {
                     valid = isValid,
-                    message = isValid ? "Acces autorise" : "Acces refuse"
+                    message = isValid ? "Acces autorise" : "Accès refusé"
                 });
             }
             catch (Exception ex)
@@ -238,7 +238,7 @@ namespace SecureDocumentPdf.Controllers
 
                 if (deleted)
                 {
-                    return Ok(new { message = "Transfert supprime avec succes" });
+                    return Ok(new { message = "Transfert supprimé avec succès" });
                 }
                 else
                 {
@@ -279,7 +279,7 @@ namespace SecureDocumentPdf.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Erreur recuperation statistiques : {transferId}");
+                _logger.LogError(ex, $"Erreur récupération statistiques : {transferId}");
                 return StatusCode(500, new { message = ex.Message });
             }
         }
@@ -294,7 +294,7 @@ namespace SecureDocumentPdf.Controllers
             try
             {
                 await _transferService.CleanupExpiredTransfersAsync();
-                return Ok(new { message = "Nettoyage effectue avec succes" });
+                return Ok(new { message = "Nettoyage effectué avec succès" });
             }
             catch (Exception ex)
             {

@@ -22,7 +22,7 @@ namespace SecureDocumentPdf.Services.Interface
         Task<TransferInfo> GetTransferInfoAsync(string transferId, string accessToken);
 
         /// <summary>
-        /// Telecharge un fichier transfere
+        /// Télécharge un fichier transféré
         /// </summary>
         Task<(Stream fileStream, string fileName, string contentType)> DownloadFileAsync(
             DownloadRequest request,

@@ -1,12 +1,9 @@
-using Serilog;
-using Serilog.Events;
-using SecureDocumentPdf.Services;
-using SecureDocumentPdf.Services.Interface;
-using SecureDocumentPdf.Services;
 using Microsoft.AspNetCore.StaticFiles;
 using QuestPDF.Infrastructure;
-using SecureDocumentPdf.Services.Interface;
 using SecureDocumentPdf.Services;
+using SecureDocumentPdf.Services.Interface;
+using Serilog;
+using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 

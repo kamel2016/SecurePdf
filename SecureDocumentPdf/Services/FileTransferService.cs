@@ -94,10 +94,6 @@ namespace SecureDocumentPdf.Services
 
                 _logger.LogInformation($"Transfert cree : {transfer.TransferId}, Fichier : {fileName}, Taille : {fileStream.Length} bytes");
 
-                // Generer l'URL de partage
-                //var shareUrl = $"/Transfer/Download/{transfer.TransferId}?token={transfer.AccessToken}";
-               
-                // APRÈS
                 var shareUrl = $"/Transfer?transferId={transfer.TransferId}&token={transfer.AccessToken}";
                 return new CreateTransferResponse
                 {
@@ -155,7 +151,7 @@ namespace SecureDocumentPdf.Services
         }
 
         /// <summary>
-        /// Telecharge un fichier transfere
+        /// Télécharge un fichier transfere
         /// </summary>
         public async Task<(Stream fileStream, string fileName, string contentType)> DownloadFileAsync(
             DownloadRequest request,
@@ -200,11 +196,11 @@ namespace SecureDocumentPdf.Services
             // Dechiffrer le fichier
             var decryptedStream = await DecryptFileAsync(transfer.EncryptedFilePath, transfer.EncryptionKey);
 
-            // Incrementer le compteur de telechargements
+            // Incrementer le compteur de Téléchargements
             transfer.CurrentDownloads++;
             LogDownloadAttempt(transfer, ipAddress, userAgent, true, null);
 
-            _logger.LogInformation($"Telechargement reussi : {transfer.TransferId}, Telechargements : {transfer.CurrentDownloads}/{transfer.MaxDownloads}");
+            _logger.LogInformation($"Téléchargement reussi : {transfer.TransferId}, Téléchargements : {transfer.CurrentDownloads}/{transfer.MaxDownloads}");
 
             return (decryptedStream, transfer.OriginalFileName, transfer.ContentType);
         }

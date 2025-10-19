@@ -1,24 +1,23 @@
-﻿using System.Security.Cryptography;
-using System.Text;
-using System.Text.Json;
-using PdfSharp.Pdf;
-using PdfSharp.Pdf.IO;
-using PdfSharp.Drawing;
+﻿using Org.BouncyCastle.Asn1.X509;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Security;
+using Org.BouncyCastle.Crypto.Operators;
 using Org.BouncyCastle.Math;
+using Org.BouncyCastle.Security;
 using Org.BouncyCastle.X509;
-using Org.BouncyCastle.Asn1.X509;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Processing;
-using SixLabors.ImageSharp.Drawing.Processing;
+using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using PdfSharp.Pdf.IO;
+using QRCoder;
 using SecureDocumentPdf.Models;
 using SecureDocumentPdf.Services.Interface;
 using SixLabors.Fonts;
-using Org.BouncyCastle.Crypto.Operators;
-using QRCoder;
-using Microsoft.AspNetCore.Http;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Drawing.Processing;
+using SixLabors.ImageSharp.Processing;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.Json;
 
 namespace SecureDocumentPdf.Services
 {

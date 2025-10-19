@@ -41,7 +41,7 @@ namespace SecureDocumentPdf.Pages
         {
             _logger.LogInformation($"Page transfert chargee - Mode: {Mode}");
 
-            // Si un transferId et token sont fournis, c'est un lien de telechargement
+            // Si un transferId et token sont fournis, c'est un lien de Téléchargement
             if (!string.IsNullOrEmpty(TransferId) && !string.IsNullOrEmpty(Token))
             {
                 Mode = "download";
