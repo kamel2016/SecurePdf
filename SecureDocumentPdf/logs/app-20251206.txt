@@ -1,0 +1,112 @@
+[2025-12-06 09:29:33 INF] ========================================
+[2025-12-06 09:29:33 INF] Application PDF Security démarrée
+[2025-12-06 09:29:33 INF] ========================================
+[2025-12-06 09:29:34 INF] Mode : Development
+[2025-12-06 09:29:35 INF] Dossiers créés avec succès
+[2025-12-06 09:29:35 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-12-06 09:29:35 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-12-06 09:29:35 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-12-06 09:29:35 INF] ========================================
+[2025-12-06 09:29:35 INF] Application prête !
+[2025-12-06 09:29:35 INF] URL : https://localhost:7001
+[2025-12-06 09:29:36 INF] Environment : Development
+[2025-12-06 09:29:36 INF] ========================================
+[2025-12-06 09:29:47 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-12-06 09:37:49 INF] ========================================
+[2025-12-06 09:37:49 INF] Application PDF Security démarrée
+[2025-12-06 09:37:49 INF] ========================================
+[2025-12-06 09:37:49 INF] Mode : Development
+[2025-12-06 09:37:50 INF] Dossiers créés avec succès
+[2025-12-06 09:37:50 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-12-06 09:37:50 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-12-06 09:37:50 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-12-06 09:37:50 INF] ========================================
+[2025-12-06 09:37:50 INF] Application prête !
+[2025-12-06 09:37:50 INF] URL : https://localhost:7001
+[2025-12-06 09:37:50 INF] Environment : Development
+[2025-12-06 09:37:50 INF] ========================================
+[2025-12-06 09:37:54 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-12-06 09:39:53 INF] ========================================
+[2025-12-06 09:39:53 INF] Application PDF Security démarrée
+[2025-12-06 09:39:53 INF] ========================================
+[2025-12-06 09:39:53 INF] Mode : Development
+[2025-12-06 09:39:55 INF] Dossiers créés avec succès
+[2025-12-06 09:39:55 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-12-06 09:39:55 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-12-06 09:39:55 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-12-06 09:39:55 INF] ========================================
+[2025-12-06 09:39:55 INF] Application prête !
+[2025-12-06 09:39:55 INF] URL : https://localhost:7001
+[2025-12-06 09:39:55 INF] Environment : Development
+[2025-12-06 09:39:55 INF] ========================================
+[2025-12-06 09:39:59 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-12-06 09:41:51 INF] ========================================
+[2025-12-06 09:41:51 INF] Application PDF Security démarrée
+[2025-12-06 09:41:51 INF] ========================================
+[2025-12-06 09:41:52 INF] Mode : Development
+[2025-12-06 09:41:53 INF] Dossiers créés avec succès
+[2025-12-06 09:41:53 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-12-06 09:41:53 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-12-06 09:41:53 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-12-06 09:41:53 INF] ========================================
+[2025-12-06 09:41:53 INF] Application prête !
+[2025-12-06 09:41:53 INF] URL : https://localhost:7001
+[2025-12-06 09:41:53 INF] Environment : Development
+[2025-12-06 09:41:53 INF] ========================================
+[2025-12-06 09:42:04 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-12-06 09:44:11 INF] ========================================
+[2025-12-06 09:44:11 INF] Application PDF Security démarrée
+[2025-12-06 09:44:11 INF] ========================================
+[2025-12-06 09:44:12 INF] Mode : Development
+[2025-12-06 09:44:12 INF] Dossiers créés avec succès
+[2025-12-06 09:44:12 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-12-06 09:44:12 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-12-06 09:44:12 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-12-06 09:44:12 INF] ========================================
+[2025-12-06 09:44:12 INF] Application prête !
+[2025-12-06 09:44:12 INF] URL : https://localhost:7001
+[2025-12-06 09:44:12 INF] Environment : Development
+[2025-12-06 09:44:12 INF] ========================================
+[2025-12-06 09:44:20 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-12-06 09:45:05 INF] ========================================
+[2025-12-06 09:45:05 INF] Application PDF Security démarrée
+[2025-12-06 09:45:05 INF] ========================================
+[2025-12-06 09:45:05 INF] Mode : Development
+[2025-12-06 09:45:06 INF] Dossiers créés avec succès
+[2025-12-06 09:45:06 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-12-06 09:45:06 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-12-06 09:45:06 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-12-06 09:45:06 INF] ========================================
+[2025-12-06 09:45:06 INF] Application prête !
+[2025-12-06 09:45:06 INF] URL : https://localhost:7001
+[2025-12-06 09:45:06 INF] Environment : Development
+[2025-12-06 09:45:06 INF] ========================================
+[2025-12-06 09:45:10 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-12-06 09:53:15 INF] ========================================
+[2025-12-06 09:53:15 INF] Application PDF Security démarrée
+[2025-12-06 09:53:15 INF] ========================================
+[2025-12-06 09:53:16 INF] Mode : Development
+[2025-12-06 09:53:23 INF] Dossiers créés avec succès
+[2025-12-06 09:53:23 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-12-06 09:53:23 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-12-06 09:53:23 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-12-06 09:53:23 INF] ========================================
+[2025-12-06 09:53:23 INF] Application prête !
+[2025-12-06 09:53:23 INF] URL : https://localhost:7001
+[2025-12-06 09:53:23 INF] Environment : Development
+[2025-12-06 09:53:23 INF] ========================================
+[2025-12-06 09:53:28 INF] 📄 Page Index chargée - Support multi-formats activé
+[2025-12-06 09:54:38 INF] ========================================
+[2025-12-06 09:54:38 INF] Application PDF Security démarrée
+[2025-12-06 09:54:38 INF] ========================================
+[2025-12-06 09:54:39 INF] Mode : Development
+[2025-12-06 09:54:39 INF] Dossiers créés avec succès
+[2025-12-06 09:54:39 INF]   - Uploads : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\uploads
+[2025-12-06 09:54:39 INF]   - Secured : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured
+[2025-12-06 09:54:39 INF]   - Previews : C:\Users\gachg\source\repos\SecureDocumentPdf\SecureDocumentPdf\wwwroot\secured\previews
+[2025-12-06 09:54:39 INF] ========================================
+[2025-12-06 09:54:39 INF] Application prête !
+[2025-12-06 09:54:39 INF] URL : https://localhost:7001
+[2025-12-06 09:54:39 INF] Environment : Development
+[2025-12-06 09:54:39 INF] ========================================
+[2025-12-06 09:54:44 INF] 📄 Page Index chargée - Support multi-formats activé

@@ -18,13 +18,12 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="height: 120px">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" asp-area="" asp-page="/Index">
-                    <img src="@(Url.Content("~/Images/IZEM.jpg"))"
+                    <img src="@(Url.Content("~/Images/granvia_logo-site.png"))"
                          alt="Logo"
-                         style="height: 80px; width: auto; margin-right: 10px;" />
-                    <span>One DigiTrust</span>
+                         style="height: 150px; width: auto; margin-right: 10px;" />
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
@@ -37,7 +36,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                         <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/PdfViewer">PdfViewer</a>
                         </li>
                         <li class="nav-item">
@@ -65,6 +64,6 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-     @await RenderSectionAsync("Scripts", required: false)
- </body>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
 </html>
