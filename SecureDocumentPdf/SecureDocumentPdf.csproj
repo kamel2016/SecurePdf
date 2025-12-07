@@ -43,6 +43,9 @@
     <Content Update="wwwroot\images\drapeau tchad.jpeg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+    <Content Update="wwwroot\images\granvia_logo-site.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="wwwroot\images\logo_ministere.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
