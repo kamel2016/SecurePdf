@@ -34,22 +34,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\images\barre_tchad-removebg-preview.png">
+    <Content Update="wwwroot\Images\barre_tchad-removebg-preview.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\images\barre_tchad.jpg">
+    <Content Update="wwwroot\Images\barre_tchad.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\images\drapeau tchad.jpeg">
+    <Content Update="wwwroot\Images\drapeau tchad.jpeg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\images\granvia_logo-site.png">
+    <Content Update="wwwroot\Images\granvia_logo-site.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\images\logo_ministere.png">
+    <Content Update="wwwroot\Images\logo_ministere.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\images\logo_ministere_1.png">
+    <Content Update="wwwroot\Images\logo_ministere_1.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
